@@ -523,100 +523,80 @@ body {
 
 /* なぜ本が解決策なのかセクション */
 .why-books {
-    padding: 3rem 0;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    position: relative;
-    overflow: hidden;
-}
-
-.why-books::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/><circle cx="10" cy="60" r="0.5" fill="white" opacity="0.1"/><circle cx="90" cy="40" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-    pointer-events: none;
+    padding: 5rem 0;
+    background: #f7fafc;
 }
 
 .why-books-header {
     text-align: center;
-    margin-bottom: 2.5rem;
-    position: relative;
-    z-index: 2;
+    margin-bottom: 3rem;
 }
 
 .why-books-header .section-title {
-    color: white;
-    font-size: 2rem;
-    margin-bottom: 0.8rem;
-    line-height: 1.2;
+    color: #1a202c;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    line-height: 1.3;
 }
 
 .highlight-text {
-    background: linear-gradient(45deg, #ffd700, #ffed4e);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #2c5aa0;
     font-weight: 700;
 }
 
 .why-books-header .section-subtitle {
     font-size: 1.1rem;
-    opacity: 0.9;
+    color: #4a5568;
     max-width: 600px;
     margin: 0 auto;
 }
 
 .why-books-content {
-    position: relative;
-    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* 比較セクション */
 .comparison-section {
-    margin-bottom: 2.5rem;
+    margin-bottom: 3rem;
 }
 
 .comparison-title {
     text-align: center;
-    font-size: 1.4rem;
-    margin-bottom: 1.2rem;
-    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #1a202c;
     font-weight: 600;
 }
 
 .comparison-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1.2rem;
+    gap: 2rem;
     max-width: 800px;
     margin: 0 auto;
 }
 
 .comparison-item {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    background: white;
     border-radius: 15px;
-    padding: 1.2rem;
+    padding: 2rem;
     text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
     transition: transform 0.3s ease;
 }
 
 .comparison-item:hover {
     transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
 
 .comparison-item.old {
-    border-left: 4px solid #ff6b6b;
+    border-left: 4px solid #e74c3c;
 }
 
 .comparison-item.new {
-    border-left: 4px solid #4ecdc4;
-    background: rgba(255, 255, 255, 0.15);
+    border-left: 4px solid #27ae60;
 }
 
 .comparison-icon {
@@ -629,7 +609,7 @@ body {
 .comparison-item h4 {
     font-size: 1.2rem;
     margin-bottom: 1rem;
-    color: white;
+    color: #1a202c;
     font-weight: 600;
 }
 
@@ -639,9 +619,9 @@ body {
 }
 
 .comparison-item li {
-    padding: 0.3rem 0;
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 0.9rem;
+    padding: 0.5rem 0;
+    color: #4a5568;
+    font-size: 0.95rem;
     line-height: 1.4;
 }
 
@@ -649,36 +629,23 @@ body {
 .benefits-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.2rem;
-    margin-bottom: 2.5rem;
+    gap: 2rem;
+    margin-bottom: 3rem;
 }
 
 .benefit-card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    padding: 1.5rem;
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
     text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
     transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.benefit-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #ffd700, #ffed4e);
+    border-top: 4px solid #2c5aa0;
 }
 
 .benefit-card:hover {
-    transform: translateY(-10px);
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
 
 .benefit-icon {
@@ -691,15 +658,15 @@ body {
 
 .benefit-card h3 {
     font-size: 1.3rem;
-    color: white;
-    margin-bottom: 0.8rem;
+    color: #1a202c;
+    margin-bottom: 1rem;
     font-weight: 600;
 }
 
 .benefit-card p {
-    color: rgba(255, 255, 255, 0.9);
-    line-height: 1.5;
-    margin-bottom: 1.2rem;
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
     font-size: 0.95rem;
 }
 
@@ -713,26 +680,26 @@ body {
 .stat-number {
     font-size: 2.2rem;
     font-weight: 700;
-    color: #ffd700;
+    color: #2c5aa0;
     line-height: 1;
 }
 
 .stat-label {
     font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: #666;
     font-weight: 500;
 }
 
 .benefit-example {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 0.8rem;
-    border-radius: 10px;
-    border-left: 3px solid #ffd700;
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 3px solid #2c5aa0;
 }
 
 .benefit-example span {
     font-style: italic;
-    color: #ffd700;
+    color: #2c5aa0;
     font-weight: 500;
     font-size: 0.9rem;
 }
@@ -740,50 +707,37 @@ body {
 /* 結論セクション */
 .why-books-conclusion {
     text-align: center;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    padding: 2rem;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    position: relative;
-}
-
-.why-books-conclusion::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 4px;
-    background: linear-gradient(90deg, #ffd700, #ffed4e);
-    border-radius: 2px;
+    background: white;
+    border-radius: 15px;
+    padding: 2.5rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    border-top: 4px solid #2c5aa0;
 }
 
 .conclusion-content h3 {
     font-size: 1.6rem;
-    color: white;
-    margin-bottom: 1.2rem;
+    color: #1a202c;
+    margin-bottom: 1.5rem;
     font-weight: 600;
 }
 
 .conclusion-text {
     font-size: 1.1rem;
-    color: white;
+    color: #4a5568;
     margin-bottom: 1.5rem;
-    line-height: 1.4;
+    line-height: 1.6;
 }
 
 .conclusion-cta {
-    background: rgba(255, 215, 0, 0.2);
-    padding: 1.2rem;
-    border-radius: 15px;
-    border: 1px solid rgba(255, 215, 0, 0.3);
+    background: #f0f7ff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 2px solid #e3f2fd;
 }
 
 .conclusion-cta p {
     font-size: 1rem;
-    color: white;
+    color: #1a202c;
     margin: 0;
     font-weight: 500;
 }
@@ -1426,17 +1380,17 @@ body {
     }
     
     .why-books-header .section-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     
     .comparison-grid {
         grid-template-columns: 1fr;
-        gap: 1.2rem;
+        gap: 1.5rem;
     }
     
     .benefits-grid {
         grid-template-columns: 1fr;
-        gap: 1.2rem;
+        gap: 1.5rem;
     }
     
     .benefit-card {
@@ -1448,7 +1402,7 @@ body {
     }
     
     .conclusion-text {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 }
 
@@ -1523,7 +1477,7 @@ body {
     }
     
     .benefit-icon {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 }
 
