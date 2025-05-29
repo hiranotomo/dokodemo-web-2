@@ -7,6 +7,7 @@
     <meta name="description" content="どこでも書店は、オフィス書店サービス、企業研修、編集コーチングを通じて、本の新しい価値を創出し、企業の成長をサポートします。">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- スキップリンク -->
@@ -17,14 +18,15 @@
         <nav class="nav" role="navigation" aria-label="メインナビゲーション">
             <div class="nav-container">
                 <div class="logo">
+                    <i class="fas fa-book-open logo-icon" aria-hidden="true"></i>
                     <div class="logo-text">どこでも書店</div>
                     <p class="tagline">本を通して社会や会社の未来を考える機会をつくる</p>
                 </div>
                 <ul class="nav-menu" id="nav-menu">
-                    <li><a href="#services">サービス</a></li>
-                    <li><a href="#about">会社概要</a></li>
-                    <li><a href="#news">お知らせ</a></li>
-                    <li><a href="#contact" class="cta-button">お問い合わせ</a></li>
+                    <li><a href="#services"><i class="fas fa-briefcase"></i> サービス</a></li>
+                    <li><a href="#about"><i class="fas fa-building"></i> 会社概要</a></li>
+                    <li><a href="#news"><i class="fas fa-bell"></i> お知らせ</a></li>
+                    <li><a href="#contact" class="cta-button"><i class="fas fa-envelope"></i> お問い合わせ</a></li>
                 </ul>
                 <button class="hamburger" 
                         aria-controls="nav-menu" 
@@ -99,7 +101,7 @@
                         <h3 class="comparison-title">従来の研修 vs 本による学習</h3>
                         <div class="comparison-grid">
                             <div class="comparison-item old">
-                                <div class="comparison-icon" aria-hidden="true">❌</div>
+                                <div class="comparison-icon" aria-hidden="true"><i class="fas fa-times-circle"></i></div>
                                 <h4>従来の研修</h4>
                                 <ul>
                                     <li>一過性（終われば忘れる）</li>
@@ -109,7 +111,7 @@
                                 </ul>
                             </div>
                             <div class="comparison-item new">
-                                <div class="comparison-icon" aria-hidden="true">✅</div>
+                                <div class="comparison-icon" aria-hidden="true"><i class="fas fa-check-circle"></i></div>
                                 <h4>本による学習</h4>
                                 <ul>
                                     <li>継続性（繰り返し学習可能）</li>
@@ -123,7 +125,7 @@
 
                     <div class="benefits-grid">
                         <div class="benefit-card">
-                            <div class="benefit-icon" aria-hidden="true">🧠</div>
+                            <div class="benefit-icon" aria-hidden="true"><i class="fas fa-brain"></i></div>
                             <h3>脳科学的効果</h3>
                             <p>読書は脳の複数領域を同時活性化し、深い思考力と集中力を養います。記憶の定着率も講義の3倍以上。</p>
                             <div class="benefit-stat">
@@ -133,7 +135,7 @@
                         </div>
 
                         <div class="benefit-card">
-                            <div class="benefit-icon" aria-hidden="true">💬</div>
+                            <div class="benefit-icon" aria-hidden="true"><i class="fas fa-comments"></i></div>
                             <h3>コミュニケーション革命</h3>
                             <p>同じ本を読んだ社員同士の自然な対話が生まれ、部署を超えた知的交流が促進されます。</p>
                             <div class="benefit-example">
@@ -142,7 +144,7 @@
                         </div>
 
                         <div class="benefit-card">
-                            <div class="benefit-icon" aria-hidden="true">📈</div>
+                            <div class="benefit-icon" aria-hidden="true"><i class="fas fa-chart-line"></i></div>
                             <h3>圧倒的ROI</h3>
                             <p>1冊1,500円で長期間の学習効果。複数人で共有でき、組織全体の知的レベルが向上します。</p>
                             <div class="benefit-stat">
@@ -152,7 +154,7 @@
                         </div>
 
                         <div class="benefit-card">
-                            <div class="benefit-icon" aria-hidden="true">🌱</div>
+                            <div class="benefit-icon" aria-hidden="true"><i class="fas fa-seedling"></i></div>
                             <h3>組織文化の変革</h3>
                             <p>「学ぶ組織」への自然な変化。社員の自発性向上と、イノベーションが生まれる土壌を形成。</p>
                             <div class="benefit-example">
@@ -189,13 +191,13 @@
                             <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80" alt="オフィス書店サービス - 本棚のある職場環境">
                         </div>
                         <div class="service-content">
-                            <div class="service-icon">📚</div>
+                            <div class="service-icon"><i class="fas fa-store"></i></div>
                             <h3>オフィス書店サービス</h3>
                             <p>3ステップで簡単にオフィス内に書店を開設。厳選された書籍で社員の学習意欲を向上させます。</p>
                             
                             <div class="service-plans">
                                 <div class="plan">
-                                    <h4>📖 15冊プラン</h4>
+                                    <h4><i class="fas fa-books"></i> 15冊プラン</h4>
                                     <p class="plan-price">月額 <span>5,000円</span>〜</p>
                                     <ul>
                                         <li>毎月15冊の厳選書籍</li>
@@ -205,7 +207,7 @@
                                 </div>
                                 
                                 <div class="plan">
-                                    <h4>📘 5冊プラン</h4>
+                                    <h4><i class="fas fa-book"></i> 5冊プラン</h4>
                                     <p class="plan-price">月額 <span>2,000円</span>〜</p>
                                     <ul>
                                         <li>リモートワーク対応</li>
@@ -222,26 +224,26 @@
                             <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" alt="企業研修 - 会議室での研修風景">
                         </div>
                         <div class="service-content">
-                            <div class="service-icon">🎯</div>
+                            <div class="service-icon"><i class="fas fa-graduation-cap"></i></div>
                             <h3>企業研修</h3>
                             <p>読書を通じた人材育成で、従来の研修では得られない深い学びと継続的な成長を実現します。著者との直接対話や体系的な学習プログラムで、社員の知的好奇心を刺激し、自発的な学習文化を醸成します。</p>
                             
                             <div class="service-features">
                                 <div class="feature">
-                                    <h4>📖 読書会企画・運営</h4>
+                                    <h4><i class="fas fa-book-reader"></i> 読書会企画・運営</h4>
                                     <p><strong>著者招聘読書会</strong>：ベストセラー作家や専門家を招いた特別読書会を企画・運営。本の内容だけでなく、執筆背景や著者の実体験を直接聞くことで、より深い理解と実践的な学びを提供します。</p>
                                     <p><strong>社内読書会サポート</strong>：部署横断的な読書会の立ち上げから運営まで全面サポート。ファシリテーション技術の指導や議論を活性化するワークショップ手法も提供します。</p>
                                 </div>
                                 
                                 <div class="feature">
-                                    <h4>🎓 カスタマイズ研修プログラム</h4>
+                                    <h4><i class="fas fa-user-graduate"></i> カスタマイズ研修プログラム</h4>
                                     <p><strong>階層別研修</strong>：新入社員から管理職まで、各階層に最適化された読書ベース研修プログラム。リーダーシップ、コミュニケーション、問題解決能力など、具体的なスキル向上を図ります。</p>
                                     <p><strong>業界特化研修</strong>：IT、金融、製造業など、業界特有の課題に対応した専門書籍を活用した研修。最新トレンドや業界動向の理解を深めます。</p>
                                     <p><strong>チームビルディング研修</strong>：同じ本を読んだメンバー同士の対話を通じて、チーム内のコミュニケーション向上と相互理解を促進します。</p>
                                 </div>
                                 
                                 <div class="feature">
-                                    <h4>📊 学習効果測定・フォローアップ</h4>
+                                    <h4><i class="fas fa-chart-bar"></i> 学習効果測定・フォローアップ</h4>
                                     <p>研修効果を可視化する独自の評価システムで、学習の定着度や行動変容を測定。継続的なフォローアップで確実な成果につなげます。</p>
                                 </div>
                             </div>
@@ -253,34 +255,34 @@
                             <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80" alt="編集コーチング - ライティングと編集作業">
                         </div>
                         <div class="service-content">
-                            <div class="service-icon">✍️</div>
+                            <div class="service-icon"><i class="fas fa-edit"></i></div>
                             <h3>編集コーチング</h3>
                             <p>企業の情報発信力を根本から変革する編集コーチングサービス。単なる文章作成技術ではなく、読者の心を動かす「伝える力」を育成し、企業ブランディングと組織の知的資産構築を支援します。</p>
                             
                             <div class="service-features">
                                 <div class="feature">
-                                    <h4>👥 編集人材育成プログラム</h4>
+                                    <h4><i class="fas fa-users"></i> 編集人材育成プログラム</h4>
                                     <p><strong>編集スキル基礎講座</strong>：文章構成、校正・校閲、レイアウト設計など、編集に必要な基礎スキルを体系的に習得。実践的なワークショップで即戦力を育成します。</p>
                                     <p><strong>コンテンツ企画力強化</strong>：読者ニーズの分析から企画立案、コンテンツ設計まで、魅力的な情報発信を可能にする企画力を養成します。</p>
                                     <p><strong>デジタル編集技術</strong>：Web記事、SNS投稿、動画コンテンツなど、デジタル時代に対応した多様な編集技術を指導します。</p>
                                 </div>
                                 
                                 <div class="feature">
-                                    <h4>📰 広報誌・社内報制作支援</h4>
+                                    <h4><i class="fas fa-newspaper"></i> 広報誌・社内報制作支援</h4>
                                     <p><strong>企画・構成サポート</strong>：読者に愛される広報誌の企画から構成、取材計画まで、プロの編集者が全面的にサポート。企業の魅力を最大限に引き出します。</p>
                                     <p><strong>取材・執筆指導</strong>：効果的なインタビュー技術や魅力的な記事の書き方を実践的に指導。社員が自ら取材・執筆できるスキルを身につけます。</p>
                                     <p><strong>デザイン・レイアウト</strong>：読みやすく美しい誌面デザインの制作支援。印刷からデジタル配信まで、最適な形での情報発信を実現します。</p>
                                 </div>
                                 
                                 <div class="feature">
-                                    <h4>📚 社史・記念誌制作</h4>
+                                    <h4><i class="fas fa-history"></i> 社史・記念誌制作</h4>
                                     <p><strong>企業ストーリー発掘</strong>：創業からの歴史を丁寧に取材し、企業の価値観や文化を物語として再構築。次世代に継承すべき企業の DNA を明文化します。</p>
                                     <p><strong>アーカイブ整理・活用</strong>：散在する資料や写真を体系的に整理し、デジタルアーカイブとして活用可能な形に再構成します。</p>
                                     <p><strong>ブランディング連携</strong>：社史制作を通じて企業ブランドの再定義と強化を図り、採用活動や営業活動にも活用できる戦略的な制作を行います。</p>
                                 </div>
                                 
                                 <div class="feature">
-                                    <h4>🎨 編集部立ち上げ・運営支援</h4>
+                                    <h4><i class="fas fa-cogs"></i> 編集部立ち上げ・運営支援</h4>
                                     <p><strong>組織設計コンサルティング</strong>：企業内編集部の組織構造、役割分担、ワークフローの設計から運営体制の構築まで包括的に支援します。</p>
                                     <p><strong>編集システム導入</strong>：効率的な編集作業を可能にするツールやシステムの選定・導入をサポート。編集プロセスの標準化と品質向上を実現します。</p>
                                     <p><strong>継続的メンタリング</strong>：編集部の成長段階に応じた継続的な指導とアドバイスで、自立した編集組織の構築を支援します。</p>
@@ -390,21 +392,25 @@
                 <ol class="flow-steps">
                     <li class="flow-step">
                         <div class="step-number" aria-hidden="true">1</div>
+                        <div class="step-icon"><i class="fas fa-file-alt"></i></div>
                         <h3>資料請求・お問い合わせ</h3>
                         <p>お問い合わせ後、弊社担当よりご連絡いたします。</p>
                     </li>
                     <li class="flow-step">
                         <div class="step-number" aria-hidden="true">2</div>
+                        <div class="step-icon"><i class="fas fa-handshake"></i></div>
                         <h3>プランのご提案・お見積もり</h3>
                         <p>現在の社内状況などをヒアリングし、最適なプランをご提案いたします。</p>
                     </li>
                     <li class="flow-step">
                         <div class="step-number" aria-hidden="true">3</div>
+                        <div class="step-icon"><i class="fas fa-pen-alt"></i></div>
                         <h3>プラン決定・ご契約</h3>
                         <p>プラン決定後、お申し込みいただきご契約となります。</p>
                     </li>
                     <li class="flow-step">
                         <div class="step-number" aria-hidden="true">4</div>
+                        <div class="step-icon"><i class="fas fa-rocket"></i></div>
                         <h3>ご利用開始</h3>
                         <p>ご契約後、書籍の選定をして配送させていただきます。</p>
                     </li>
@@ -547,6 +553,7 @@
             <div class="footer-content">
                 <div class="footer-main">
                     <div class="footer-logo">
+                        <i class="fas fa-book-open footer-logo-icon" aria-hidden="true"></i>
                         <h3>どこでも書店</h3>
                         <p>開発元：どこでも書店株式会社</p>
                     </div>

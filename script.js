@@ -294,7 +294,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
     
     // アニメーション対象要素を監視
-    const animateElements = document.querySelectorAll('.problem-item, .service-card, .reason-item, .testimonial-card, .flow-step');
+    const animateElements = document.querySelectorAll('.problem-item, .service-card, .reason-item, .testimonial-card, .flow-step, .feature');
     animateElements.forEach(el => {
         observer.observe(el);
     });
@@ -364,11 +364,15 @@ style.textContent = `
     .problem-item,
     .reason-item,
     .testimonial-item,
-    .flow-step,
-    .feature {
+    .flow-step {
         opacity: 0;
         transform: translateY(30px);
         transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    
+    .service-card .feature {
+        opacity: 1;
+        transform: translateY(0);
     }
     
     .problem-item.animate-in,
