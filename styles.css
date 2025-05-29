@@ -2455,16 +2455,17 @@ textarea:focus {
 
 /* FAQページ */
 .faq-page {
-    padding: 120px 0 80px;
-    margin-top: 80px;
+    padding: 120px 0 80px !important;
+    margin-top: 80px !important;
+    background: #f7fafc !important;
 }
 
 .faq-nav {
-    background: white;
-    border-radius: 15px;
-    padding: 2rem;
-    margin-bottom: 3rem;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    background: white !important;
+    border-radius: 15px !important;
+    padding: 2rem !important;
+    margin-bottom: 3rem !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08) !important;
 }
 
 .faq-nav h2 {
@@ -2518,11 +2519,11 @@ textarea:focus {
 }
 
 .faq-section {
-    margin-bottom: 4rem;
-    background: white;
-    border-radius: 15px;
-    padding: 2.5rem;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    margin-bottom: 4rem !important;
+    background: white !important;
+    border-radius: 15px !important;
+    padding: 2.5rem !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08) !important;
 }
 
 .faq-category-title {
@@ -2560,19 +2561,19 @@ textarea:focus {
 }
 
 .faq-question {
-    width: 100%;
+    width: 100% !important;
     background: var(--background-light);
-    border: none;
-    padding: 1.5rem;
-    text-align: left;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--text-color);
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: all 0.3s ease;
+    border: none !important;
+    padding: 1.5rem !important;
+    text-align: left !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    color: var(--text-color) !important;
+    cursor: pointer !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    transition: all 0.3s ease !important;
 }
 
 .faq-question:hover {
@@ -2602,10 +2603,10 @@ textarea:focus {
 }
 
 .faq-answer {
-    display: none;
-    padding: 1.5rem;
-    background: white;
-    border-top: 1px solid var(--border-color);
+    display: none !important;
+    padding: 1.5rem !important;
+    background: white !important;
+    border-top: 1px solid var(--border-color) !important;
 }
 
 .faq-answer p {
@@ -2631,7 +2632,7 @@ textarea:focus {
 }
 
 .faq-cta p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin-bottom: 2rem;
     opacity: 0.9;
 }
