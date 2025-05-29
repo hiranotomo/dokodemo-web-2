@@ -3,126 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>どこでも書店 | 本を通して社会や会社の未来を考える機会をつくる</title>
-    <meta name="description" content="どこでも書店は、オフィス書店サービス、企業研修、編集コーチングを通じて、本の新しい価値を創出し、企業の成長をサポートします。">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>どこでも書店 | au</title>
+    <meta name="description" content="本を通して社会や会社の未来を考える機会をつくる。どこでも書店のオフィス書店サービス、企業研修、編集コーチングで組織の成長をサポートします。">
+    <link rel="stylesheet" href="styles2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta property="og:title" content="どこでも書店 | 本を通して社会や会社の未来を考える機会をつくる">
+    <meta property="og:description" content="オフィス書店サービス、企業研修、編集コーチングで組織の成長をサポートします。">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:url" content="https://hiranotomo.github.io/dokodemo-web-3/index2.html">
+    <meta property="og:type" content="website">
 </head>
 <body>
-    <!-- 有機的グラフィック要素 -->
-    <div class="organic-shape organic-shape-1" aria-hidden="true"></div>
-    <div class="organic-shape organic-shape-2" aria-hidden="true"></div>
-    <div class="organic-shape organic-shape-3" aria-hidden="true"></div>
-    
-    <!-- スキップリンク -->
+    <!-- Skip link for accessibility -->
     <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
     
-    <!-- ヘッダー -->
+    <!-- Header -->
     <header class="header" role="banner">
-        <nav class="nav" role="navigation" aria-label="メインナビゲーション">
-            <div class="nav-container">
-                <div class="logo">
-                    <div class="logo-icon" aria-hidden="true">
-                        <i class="fas fa-book-open"></i>
-                    </div>
-                    <div>
-                        <div class="logo-text">どこでも書店</div>
-                        <p class="tagline">本を通して社会や会社の未来を考える機会をつくる</p>
-                    </div>
-                </div>
-                <ul class="nav-menu" id="nav-menu">
-                    <li><a href="#services"><i class="fas fa-briefcase"></i> サービス</a></li>
-                    <li><a href="#about"><i class="fas fa-building"></i> 会社概要</a></li>
-                    <li><a href="#news"><i class="fas fa-bell"></i> お知らせ</a></li>
-                    <li><a href="#contact" class="cta-button"><i class="fas fa-envelope"></i> お問い合わせ</a></li>
-                </ul>
+        <div class="container">
+            <nav class="nav-content" role="navigation" aria-label="メインナビゲーション">
+                <a href="index2.html" class="logo">
+                    <i class="fas fa-book-open" aria-hidden="true"></i>
+                    <span>どこでも書店</span>
+                </a>
                 <button class="hamburger" 
-                        aria-controls="nav-menu" 
+                        aria-label="メニューを開く" 
                         aria-expanded="false" 
-                        aria-label="メニューを開く"
-                        type="button">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
+                        aria-controls="menu-panel">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
                 </button>
-            </div>
-        </nav>
+            </nav>
+        </div>
+        
+        <!-- Backdrop -->
+        <div class="backdrop" aria-hidden="true"></div>
+        
+        <!-- Slide Panel Navigation -->
+        <aside class="menu-panel" id="menu-panel" role="navigation" aria-label="サイトナビゲーション">
+            <nav>
+                <ul class="menu-list" role="list">
+                    <li><a href="#services">サービス</a></li>
+                    <li><a href="#pricing">料金</a></li>
+                    <li><a href="#testimonials">お客様の声</a></li>
+                    <li><a href="#ceo-column">社長コラム</a></li>
+                    <li><a href="#about">会社概要</a></li>
+                    <li><a href="faq2.html">よくある質問</a></li>
+                    <li><a href="privacy2.html">プライバシーポリシー</a></li>
+                    <li><a href="#contact">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </aside>
     </header>
 
-    <!-- メインコンテンツ -->
+    <!-- Main Content -->
     <main id="main-content" role="main">
-        <!-- ヒーローセクション -->
+        <!-- Hero Section -->
         <section class="hero" aria-labelledby="hero-title">
-            <div class="hero-background" aria-hidden="true">
-                <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=1200&q=80" alt="" class="hero-bg-image">
-            </div>
+            <!-- Organic Shapes for au Visual Identity -->
+            <div class="hero-organic-shape hero-organic-shape-1" aria-hidden="true"></div>
+            <div class="hero-organic-shape hero-organic-shape-2" aria-hidden="true"></div>
+            <div class="hero-organic-shape hero-organic-shape-3" aria-hidden="true"></div>
+            
             <div class="container">
                 <div class="hero-content">
+                    <!-- English Catchphrase above Japanese title -->
+                    <div class="hero-english-text">
+                        Creating opportunities to think about the future through books
+                    </div>
+                    
                     <h1 id="hero-title" class="hero-title">
-                        <span class="highlight">どこでも書店</span>で<br>
-                        企業の成長を加速させる
+                        <span class="text-brand">本を通して</span><br>
+                        社会や会社の未来を<br>
+                        <span class="text-brand">考える機会</span>をつくる
                     </h1>
                     <p class="hero-subtitle">
-                        オフィス書店サービス・企業研修・編集コーチングで<br>
-                        あなたの会社の「学ぶ文化」を創造します
+                        『おもしろいほうの学び』を実現する<br>
+                        オフィス書店サービス・企業研修・編集コーチング
                     </p>
                     <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-primary">無料相談を申し込む</a>
-                        <a href="#services" class="btn btn-secondary">サービス詳細を見る</a>
+                        <a href="#contact" class="btn btn-large">無料相談を申し込む</a>
+                        <a href="#services" class="btn btn-secondary btn-large">サービス詳細</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 課題提起セクション -->
-        <section class="problems" aria-labelledby="problems-title">
+        <!-- Problem Statement Section -->
+        <section class="content-section bg-light">
             <div class="container">
-                <h2 id="problems-title" class="section-title">社長・人事・教育管理者のみなさん、<br>こんな悩みを抱えていませんか？</h2>
-                <div class="problems-grid" role="list">
-                    <div class="problem-item" role="listitem">社員のビジネスレベルを上げたい</div>
-                    <div class="problem-item" role="listitem">自ら学習する人材へ育成したい</div>
-                    <div class="problem-item" role="listitem">社員教育がうまくいかない</div>
-                    <div class="problem-item" role="listitem">会社の生産性を上げたい</div>
-                    <div class="problem-item" role="listitem">社員の仕事の取り組む姿勢を変えたい</div>
-                    <div class="problem-item" role="listitem">社員が成長する機会が欲しい</div>
-                    <div class="problem-item" role="listitem">社員が本を読む環境を作りたい</div>
-                    <div class="problem-item" role="listitem">社員教育が追いついてない</div>
-                    <div class="problem-item" role="listitem">会社の伸びがイマイチだ</div>
+                <h2 class="section-title">社長・人事・教育管理者のみなさん、<br>こんな悩みを抱えていませんか？</h2>
+                
+                <div class="grid grid-3">
+                    <div class="card">
+                        <div class="card-content">
+                            <h3 class="card-title text-brand">
+                                <i class="fas fa-chart-line" aria-hidden="true"></i>
+                                ビジネスレベル向上
+                            </h3>
+                            <ul class="problem-list">
+                                <li>社員のビジネスレベルを上げたい</li>
+                                <li>会社の生産性を上げたい</li>
+                                <li>会社の伸びがイマイチだ</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-content">
+                            <h3 class="card-title text-brand">
+                                <i class="fas fa-user-graduate" aria-hidden="true"></i>
+                                人材育成の課題
+                            </h3>
+                            <ul class="problem-list">
+                                <li>自ら学習する人材へ育成したい</li>
+                                <li>社員教育がうまくいかない</li>
+                                <li>社員教育が追いついてない</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-content">
+                            <h3 class="card-title text-brand">
+                                <i class="fas fa-seedling" aria-hidden="true"></i>
+                                学習環境づくり
+                            </h3>
+                            <ul class="problem-list">
+                                <li>社員の仕事の取り組む姿勢を変えたい</li>
+                                <li>社員が成長する機会が欲しい</li>
+                                <li>社員が本を読む環境を作りたい</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
+                
                 <div class="solution-intro">
-                    <h3>私たちどこでも書店にお任せください</h3>
-                    <p>3つのサービスで、企業の学習環境と成長をトータルサポートします</p>
+                    <h3 class="text-center text-brand">私たちどこでも書店にお任せください</h3>
+                    <p class="text-center">3つのサービスで、企業の学習環境と成長をトータルサポートします</p>
                 </div>
             </div>
         </section>
 
-        <!-- なぜ本が解決策なのか -->
-        <section class="why-books" aria-labelledby="why-books-title">
+        <!-- Why Books Section -->
+        <section class="content-section">
             <div class="container">
-                <div class="why-books-header">
-                    <h2 id="why-books-title" class="section-title">なぜ「本」が企業課題の<br><span class="highlight-text">最強の解決策</span>なのか？</h2>
+                <div class="section-header">
+                    <h2 class="section-title">なぜ「本」が企業課題の<br><span class="text-brand">最強の解決策</span>なのか？</h2>
                     <p class="section-subtitle">従来の研修では得られない、本だけが持つ4つの力</p>
                 </div>
 
-                <div class="why-books-content">
-                    <div class="comparison-section">
-                        <h3 class="comparison-title">従来の研修 vs 本による学習</h3>
-                        <div class="comparison-grid">
-                            <div class="comparison-item old">
-                                <div class="comparison-icon" aria-hidden="true"><i class="fas fa-times-circle"></i></div>
-                                <h4>従来の研修</h4>
-                                <ul>
+                <!-- Comparison Section -->
+                <div class="comparison-section">
+                    <h3 class="text-center mb-3">従来の研修 vs 本による学習</h3>
+                    <div class="grid grid-2">
+                        <div class="card comparison-old">
+                            <div class="card-content">
+                                <div class="comparison-header">
+                                    <i class="fas fa-times-circle text-red" aria-hidden="true"></i>
+                                    <h4>従来の研修</h4>
+                                </div>
+                                <ul class="comparison-list">
                                     <li>一過性（終われば忘れる）</li>
                                     <li>画一的（個人に最適化されない）</li>
                                     <li>受動的（聞くだけ）</li>
                                     <li>高コスト（1回50万円〜）</li>
                                 </ul>
                             </div>
-                            <div class="comparison-item new">
-                                <div class="comparison-icon" aria-hidden="true"><i class="fas fa-check-circle"></i></div>
-                                <h4>本による学習</h4>
-                                <ul>
+                        </div>
+
+                        <div class="card comparison-new">
+                            <div class="card-content">
+                                <div class="comparison-header">
+                                    <i class="fas fa-check-circle text-brand" aria-hidden="true"></i>
+                                    <h4>本による学習</h4>
+                                </div>
+                                <ul class="comparison-list">
                                     <li>継続性（繰り返し学習可能）</li>
                                     <li>個別最適（個人のペースで）</li>
                                     <li>能動的（自発的な学習）</li>
@@ -131,56 +187,75 @@
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="benefits-grid">
-                        <div class="benefit-card">
-                            <div class="benefit-icon" aria-hidden="true"><i class="fas fa-brain"></i></div>
-                            <h3>脳科学的効果</h3>
-                            <p>読書は脳の複数領域を同時活性化し、深い思考力と集中力を養います。記憶の定着率も講義の3倍以上。</p>
+                <!-- Benefits Grid -->
+                <div class="grid grid-2">
+                    <div class="card benefit-card">
+                        <div class="card-content">
+                            <div class="benefit-icon">
+                                <i class="fas fa-brain text-brand" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="card-title">脳科学的効果</h3>
+                            <p class="card-text">読書は脳の複数領域を同時活性化し、深い思考力と集中力を養います。記憶の定着率も講義の3倍以上。</p>
                             <div class="benefit-stat">
-                                <span class="stat-number">3倍</span>
+                                <span class="stat-number text-brand">3倍</span>
                                 <span class="stat-label">記憶定着率</span>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="benefit-card">
-                            <div class="benefit-icon" aria-hidden="true"><i class="fas fa-comments"></i></div>
-                            <h3>コミュニケーション革命</h3>
-                            <p>同じ本を読んだ社員同士の自然な対話が生まれ、部署を超えた知的交流が促進されます。</p>
+                    <div class="card benefit-card">
+                        <div class="card-content">
+                            <div class="benefit-icon">
+                                <i class="fas fa-comments text-brand" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="card-title">コミュニケーション革命</h3>
+                            <p class="card-text">同じ本を読んだ社員同士の自然な対話が生まれ、部署を超えた知的交流が促進されます。</p>
                             <div class="benefit-example">
                                 <span>「あの本の第3章の話だけど...」</span>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="benefit-card">
-                            <div class="benefit-icon" aria-hidden="true"><i class="fas fa-chart-line"></i></div>
-                            <h3>圧倒的ROI</h3>
-                            <p>1冊1,500円で長期間の学習効果。複数人で共有でき、組織全体の知的レベルが向上します。</p>
+                    <div class="card benefit-card">
+                        <div class="card-content">
+                            <div class="benefit-icon">
+                                <i class="fas fa-chart-line text-brand" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="card-title">圧倒的ROI</h3>
+                            <p class="card-text">1冊1,500円で長期間の学習効果。複数人で共有でき、組織全体の知的レベルが向上します。</p>
                             <div class="benefit-stat">
-                                <span class="stat-number">1/30</span>
+                                <span class="stat-number text-brand">1/30</span>
                                 <span class="stat-label">研修コスト比</span>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="benefit-card">
-                            <div class="benefit-icon" aria-hidden="true"><i class="fas fa-seedling"></i></div>
-                            <h3>組織文化の変革</h3>
-                            <p>「学ぶ組織」への自然な変化。社員の自発性向上と、イノベーションが生まれる土壌を形成。</p>
+                    <div class="card benefit-card">
+                        <div class="card-content">
+                            <div class="benefit-icon">
+                                <i class="fas fa-seedling text-brand" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="card-title">組織文化の変革</h3>
+                            <p class="card-text">「学ぶ組織」への自然な変化。社員の自発性向上と、イノベーションが生まれる土壌を形成。</p>
                             <div class="benefit-example">
                                 <span>自走する学習組織の構築</span>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="why-books-conclusion">
-                        <div class="conclusion-content">
-                            <h3>つまり、本は...</h3>
+                <div class="conclusion-section">
+                    <div class="card conclusion-card">
+                        <div class="card-content text-center">
+                            <h3 class="text-brand">つまり、本は...</h3>
                             <p class="conclusion-text">
                                 <strong>最も費用対効果が高く、持続可能で、<br>
                                 個人と組織の両方を成長させる学習ツール</strong>
                             </p>
                             <div class="conclusion-cta">
-                                <p>だからこそ、どこでも書店の<span class="highlight-text">プロの選書</span>と<span class="highlight-text">継続サポート</span>が必要なのです</p>
+                                <p>だからこそ、どこでも書店の<span class="text-brand">プロの選書</span>と<span class="text-brand">継続サポート</span>が必要なのです</p>
                             </div>
                         </div>
                     </div>
@@ -188,198 +263,22 @@
             </div>
         </section>
 
-        <!-- サービス紹介 -->
-        <section id="services" class="services">
+        <!-- CEO Column Section -->
+        <section id="ceo-column" class="content-section bg-light">
             <div class="container">
-                <h2 class="section-title">サービス紹介</h2>
-                <p class="section-subtitle">オフィス書店サービスをメインに、企業の成長をトータルサポート</p>
-                
-                <!-- メインサービス：オフィス書店 -->
-                <div class="main-service">
-                    <div class="main-service-header">
-                        <h3 class="main-service-title">
-                            <i class="fas fa-store"></i>
-                            オフィス書店サービス
-                            <span class="main-badge">メインサービス</span>
-                        </h3>
-                        <p class="main-service-description">
-                            3ステップで簡単にオフィス内に書店を開設。厳選された書籍で社員の学習意欲を向上させ、組織全体の知的レベルを底上げします。
-                        </p>
-                    </div>
-                    
-                    <div class="main-service-content">
-                        <div class="service-image-main">
-                            <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=1200&q=80" alt="オフィス書店サービス - 美しい本棚と書籍が並ぶ書店">
-                        </div>
-                        
-                        <div class="pricing-section">
-                            <h4 class="pricing-title">料金プラン</h4>
-                            <div class="pricing-grid">
-                                <div class="pricing-card featured">
-                                    <div class="plan-header">
-                                        <h5><i class="fas fa-books"></i> 選書プラン2</h5>
-                                        <p class="plan-subtitle">オススメ15冊・選書15冊</p>
-                                        <div class="plan-badge">人気No.1</div>
-                                    </div>
-                                    <div class="plan-pricing">
-                                        <div class="price-row">
-                                            <span class="price-label">初期費用</span>
-                                            <span class="price-value">¥70,000</span>
-                                        </div>
-                                        <div class="price-row">
-                                            <span class="price-label">月額費用</span>
-                                            <span class="price-value">¥19,000</span>
-                                        </div>
-                                    </div>
-                                    <div class="plan-features">
-                                        <ul>
-                                            <li><i class="fas fa-check"></i> 専門家による選書</li>
-                                            <li><i class="fas fa-check"></i> 2ヶ月に1回の入れ替え</li>
-                                            <li><i class="fas fa-check"></i> 2ヶ月に1回のミーティング</li>
-                                            <li><i class="fas fa-check"></i> 本棚設置サポート</li>
-                                            <li><i class="fas fa-check"></i> 読書会開催支援</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                
-                                <div class="pricing-card">
-                                    <div class="plan-header">
-                                        <h5><i class="fas fa-book-open"></i> 選書プラン3</h5>
-                                        <p class="plan-subtitle">オススメ15冊・選書15冊</p>
-                                    </div>
-                                    <div class="plan-pricing">
-                                        <div class="price-row">
-                                            <span class="price-label">初期費用</span>
-                                            <span class="price-value">¥70,000</span>
-                                        </div>
-                                        <div class="price-row">
-                                            <span class="price-label">月額費用</span>
-                                            <span class="price-value">¥15,000</span>
-                                        </div>
-                                    </div>
-                                    <div class="plan-features">
-                                        <ul>
-                                            <li><i class="fas fa-check"></i> 専門家による選書</li>
-                                            <li><i class="fas fa-check"></i> 3ヶ月に1回の入れ替え</li>
-                                            <li><i class="fas fa-check"></i> 3ヶ月に1回のミーティング</li>
-                                            <li><i class="fas fa-check"></i> リモートワーク対応</li>
-                                            <li><i class="fas fa-check"></i> 個人宅配送可能</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                
-                                <div class="pricing-card">
-                                    <div class="plan-header">
-                                        <h5><i class="fas fa-star"></i> おまかせプラン</h5>
-                                        <p class="plan-subtitle">オススメ30冊</p>
-                                    </div>
-                                    <div class="plan-pricing">
-                                        <div class="price-row">
-                                            <span class="price-label">初期費用</span>
-                                            <span class="price-value">¥70,000</span>
-                                        </div>
-                                        <div class="price-row">
-                                            <span class="price-label">月額費用</span>
-                                            <span class="price-value">¥15,000</span>
-                                        </div>
-                                    </div>
-                                    <div class="plan-features">
-                                        <ul>
-                                            <li><i class="fas fa-check"></i> 専門家による選書</li>
-                                            <li><i class="fas fa-check"></i> 3ヶ月に一回の入れ替え</li>
-                                            <li><i class="fas fa-check"></i> 3ヶ月に1回のミーティング</li>
-                                            <li><i class="fas fa-check"></i> 料金は年払い</li>
-                                            <li><i class="fas fa-check"></i> 返送料（配送料）別途</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="pricing-notes">
-                                <p><i class="fas fa-info-circle"></i> すべてのプランに専門家による選書と定期的なサポートが含まれます</p>
-                                <p><i class="fas fa-shipping-fast"></i> 配送料・返送料は別途料金となります</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- オプションサービス -->
-                <div class="optional-services">
-                    <div class="optional-header">
-                        <h3 class="optional-title">オプションサービス</h3>
-                        <p class="optional-subtitle">オフィス書店サービスと組み合わせて、さらなる効果を</p>
-                    </div>
-                    
-                    <div class="optional-grid">
-                        <div class="optional-card">
-                            <div class="optional-icon"><i class="fas fa-graduation-cap"></i></div>
-                            <h4>企業研修</h4>
-                            <p class="optional-description">読書を通じた人材育成で、従来の研修では得られない深い学びと継続的な成長を実現</p>
-                            
-                            <div class="optional-features">
-                                <div class="feature-item">
-                                    <h5><i class="fas fa-book-reader"></i> 読書会企画・運営</h5>
-                                    <p>著者招聘読書会、社内読書会サポート</p>
-                                </div>
-                                <div class="feature-item">
-                                    <h5><i class="fas fa-user-graduate"></i> カスタマイズ研修</h5>
-                                    <p>階層別研修、業界特化研修、チームビルディング</p>
-                                </div>
-                                <div class="feature-item">
-                                    <h5><i class="fas fa-chart-bar"></i> 効果測定・フォローアップ</h5>
-                                    <p>学習効果の可視化と継続的なサポート</p>
-                                </div>
-                            </div>
-                            
-                            <div class="optional-cta">
-                                <button class="btn-secondary">詳細を見る</button>
-                            </div>
-                        </div>
-                        
-                        <div class="optional-card">
-                            <div class="optional-icon"><i class="fas fa-edit"></i></div>
-                            <h4>編集コーチング</h4>
-                            <p class="optional-description">企業の情報発信力を根本から変革し、読者の心を動かす「伝える力」を育成</p>
-                            
-                            <div class="optional-features">
-                                <div class="feature-item">
-                                    <h5><i class="fas fa-users"></i> 編集人材育成</h5>
-                                    <p>編集スキル基礎講座、コンテンツ企画力強化</p>
-                                </div>
-                                <div class="feature-item">
-                                    <h5><i class="fas fa-newspaper"></i> 広報誌・社内報制作</h5>
-                                    <p>企画・構成サポート、取材・執筆指導</p>
-                                </div>
-                                <div class="feature-item">
-                                    <h5><i class="fas fa-history"></i> 社史・記念誌制作</h5>
-                                    <p>企業ストーリー発掘、ブランディング連携</p>
-                                </div>
-                            </div>
-                            
-                            <div class="optional-cta">
-                                <button class="btn-secondary">詳細を見る</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 社長コラム -->
-        <section class="ceo-column" aria-labelledby="ceo-column-title">
-            <div class="container">
-                <div class="column-header">
-                    <h2 id="ceo-column-title" class="section-title">社長コラム</h2>
+                <div class="section-header">
+                    <h2 class="section-title">社長コラム</h2>
                     <p class="section-subtitle">代表 山﨑雅人が語る、本が創る新しい組織コミュニケーション</p>
                 </div>
                 
                 <div class="column-content">
                     <div class="column-image">
-                        <img src="https://coki.jp/wp-content/uploads/2019/09/9fbd55d70da0c25926b5c2f58e133cce-1024x683-1024x683.jpg" alt="オフィスでの読書風景 - 本を通じたコミュニケーション">
+                        <img src="https://coki.jp/wp-content/uploads/2019/09/9fbd55d70da0c25926b5c2f58e133cce-1024x683-1024x683.jpg" 
+                             alt="オフィスでの読書風景 - 本を通じたコミュニケーション" loading="lazy">
                     </div>
                     
                     <div class="column-text">
-                        <h3>「縦横のコミュニケーション」は、もう古い。<br>これからは「立体的な知識共有」の時代</h3>
+                        <h3 class="ceo-title">「縦横のコミュニケーション」は、もう古い。<br>これからは「立体的な知識共有」の時代</h3>
                         
                         <div class="interview-section">
                             <div class="question">
@@ -392,7 +291,7 @@
                                 <div class="answer-content">
                                     <p>正直に言うと、その表現はもう時代遅れだと思います。「縦」「横」という二次元的な発想では、現代の複雑な組織課題は解決できません。</p>
                                     
-                                    <p>私たちが目指すのは<strong>「立体的な知識共有」</strong>です。本を媒介にすることで、階層や部署の枠を超えた、まったく新しいコミュニケーションが生まれるんです。</p>
+                                    <p>私たちが目指すのは<strong class="text-brand">「立体的な知識共有」</strong>です。本を媒介にすることで、階層や部署の枠を超えた、まったく新しいコミュニケーションが生まれるんです。</p>
                                 </div>
                             </div>
                         </div>
@@ -430,22 +329,22 @@
                                     
                                     <div class="book-powers">
                                         <div class="power-item">
-                                            <h4><i class="fas fa-equals"></i> 平等性</h4>
+                                            <h4><i class="fas fa-equals text-brand" aria-hidden="true"></i> 平等性</h4>
                                             <p>社長も新入社員も、同じ1冊の本の前では対等な読者です</p>
                                         </div>
                                         
                                         <div class="power-item">
-                                            <h4><i class="fas fa-clock"></i> 非同期性</h4>
+                                            <h4><i class="fas fa-clock text-brand" aria-hidden="true"></i> 非同期性</h4>
                                             <p>それぞれのペースで読み、考える時間を持てます</p>
                                         </div>
                                         
                                         <div class="power-item">
-                                            <h4><i class="fas fa-lightbulb"></i> 触媒効果</h4>
+                                            <h4><i class="fas fa-lightbulb text-brand" aria-hidden="true"></i> 触媒効果</h4>
                                             <p>本の内容が、普段は話さない深い話題のきっかけになります</p>
                                         </div>
                                     </div>
                                     
-                                    <p>研修やセミナーは一過性ですが、本は手元に残り、何度でも参照できる。そして何より、<strong>「この本、どう思った？」</strong>という自然な会話から、組織に新しい化学反応が生まれるんです。</p>
+                                    <p>研修やセミナーは一過性ですが、本は手元に残り、何度でも参照できる。そして何より、<strong class="text-brand">「この本、どう思った？」</strong>という自然な会話から、組織に新しい化学反応が生まれるんです。</p>
                                 </div>
                             </div>
                         </div>
@@ -465,28 +364,36 @@
                                         <div class="case-item">
                                             <h5>IT企業A社の場合</h5>
                                             <p>エンジニアチームが読んだマネジメント本をきっかけに、営業チームとの定期的な「本談義」が始まり、プロダクト開発のスピードが30%向上しました。</p>
+                                            <div class="case-metric">
+                                                <span class="metric-number">30%</span>
+                                                <span class="metric-label">開発スピード向上</span>
+                                            </div>
                                         </div>
                                         
                                         <div class="case-item">
                                             <h5>製造業B社の場合</h5>
                                             <p>工場長が推薦した哲学書を若手社員が読み、「なぜこの仕事をするのか」について語り合う場が自然発生。離職率が半減しました。</p>
+                                            <div class="case-metric">
+                                                <span class="metric-number">50%</span>
+                                                <span class="metric-label">離職率減少</span>
+                                            </div>
                                         </div>
                                     </div>
                                     
-                                    <p>これらは全て、従来の「縦横」という枠組みでは説明できない、<strong>立体的で有機的な変化</strong>なんです。</p>
+                                    <p>これらは全て、従来の「縦横」という枠組みでは説明できない、<strong class="text-brand">立体的で有機的な変化</strong>なんです。</p>
                                 </div>
                             </div>
                         </div>
                         
                         <div class="column-conclusion">
-                            <h4>組織に「知的好奇心の循環」を</h4>
+                            <h4 class="text-brand">組織に「知的好奇心の循環」を</h4>
                             <p>私たちが目指すのは、単なる情報共有ではありません。組織の中に「知的好奇心の循環」を作り出すこと。一人の学びが、また別の誰かの学びを刺激し、それが組織全体の成長エネルギーになる。</p>
                             
                             <p>そんな「学び合う組織」を、本の力で実現していきたいと思っています。</p>
                             
                             <div class="ceo-signature">
                                 <p><strong>どこでも書店株式会社 代表取締役</strong></p>
-                                <p class="signature-name">山﨑 雅人</p>
+                                <p class="signature-name text-brand">山﨑 雅人</p>
                             </div>
                         </div>
                     </div>
@@ -494,252 +401,477 @@
             </div>
         </section>
 
-        <!-- 選ばれる理由 -->
-        <section class="reasons" aria-labelledby="reasons-title">
+        <!-- Services Section -->
+        <section id="services" class="content-section">
             <div class="container">
-                <h2 id="reasons-title" class="section-title">どこでも書店が選ばれる理由</h2>
-                <div class="reasons-grid">
-                    <div class="reason-item">
-                        <h3>本の理解度を上げるための、著者による読書会開催</h3>
-                        <p>著者本人による読書会を行うことで本人の経験や言葉の背景にある思いなどを直接聞くことができます。これにより、読書だけでは得られなかった学びや、理解をより正確に深めることが可能です。</p>
-                    </div>
-                    <div class="reason-item">
-                        <h3>1人1人の目標に合わせたオーダーメイド伴走プランもご用意</h3>
-                        <p>弊社担当者が御社の社内状況、課題、問題点等をヒアリングし、社員様の状況に合わせて最適な本をセレクトします。目標設定を行い、行動プランの策定、フィードバックを行うことで、本の学びを最大限活用できるスキルが身につくまで伴走するプランもご用意しています。</p>
-                    </div>
-                    <div class="reason-item">
-                        <h3>本を買う必要がなく、在庫管理の手間も省ける</h3>
-                        <p>本の選定から購入までの手間や、購入後の管理の手間が一切かからないので、貴重な社員様の時間をより生産的な業務への時間に回すことが可能です。手間がかからない事で在庫管理のための時間やスペースを確保する必要がありません。</p>
-                    </div>
-                    <div class="reason-item">
-                        <h3>従業員の自発性が向上し、学習意欲が上がり社内が活性化</h3>
-                        <p>自発性、学習意欲のない従業員に「自発性をもて！」と伝えるのは一番言っては行けない言葉です。本によって従業員の好奇心を刺激することで自然と自発性を養うことが可能です。また、同じ本を手にとった従業員同士で共通の話題が生まれるので、円滑なコミュニケーション、社内の活性化を促進することができます。</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 導入企業の声 -->
-        <section class="testimonials" aria-labelledby="testimonials-title">
-            <div class="container">
-                <h2 id="testimonials-title" class="section-title">導入企業様の声</h2>
-                <p class="section-subtitle">多くの企業様にご利用いただいています</p>
+                <h2 class="section-title">サービス</h2>
+                <p class="section-subtitle">
+                    3つのサービスで企業の成長をトータルサポート
+                </p>
                 
-                <div class="testimonials-grid">
-                    <div class="testimonial-card">
-                        <div class="company-logo">
-                            <img src="https://images.unsplash.com/photo-1549923746-c502d488b3ea?auto=format&fit=crop&w=200&q=80" alt="Yahoo!JAPAN ロゴイメージ">
+                <div class="grid grid-3">
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=600&q=80" 
+                                 alt="オフィス書店サービス" loading="lazy">
                         </div>
-                        <h3>Yahoo!JAPAN</h3>
-                        <blockquote class="testimonial-text">
-                            「オフィスに新しい本が常にあることで、社員が未知の価値観に触れ、別視点から物事を捉え直すきっかけになっています。」
-                        </blockquote>
-                        <div class="testimonial-effect">
-                            <span class="effect-label">導入効果</span>
-                            <span class="effect-text">社員の視野拡大・創造性向上</span>
+                        <div class="card-content">
+                            <h3 class="card-title">
+                                <i class="fas fa-store text-brand" aria-hidden="true"></i>
+                                オフィス書店サービス
+                            </h3>
+                            <p class="card-text">
+                                厳選された書籍をオフィスに設置。社員の学習意欲向上と組織の知的レベル向上を実現します。
+                            </p>
+                            <a href="#pricing" class="btn">料金を見る</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80" 
+                                 alt="企業研修" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">
+                                <i class="fas fa-graduation-cap text-brand" aria-hidden="true"></i>
+                                企業研修
+                            </h3>
+                            <p class="card-text">
+                                読書を通じた人材育成。著者招聘読書会や階層別研修で、深い学びと継続的成長を支援します。
+                            </p>
+                            <a href="#contact" class="btn">詳細を問い合わせる</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1456324504439-367cee3b3c32?auto=format&fit=crop&w=600&q=80" 
+                                 alt="編集コーチング" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">
+                                <i class="fas fa-edit text-brand" aria-hidden="true"></i>
+                                編集コーチング
+                            </h3>
+                            <p class="card-text">
+                                企業の情報発信力を向上。編集人材育成から社史制作まで、伝える力を総合的にサポートします。
+                            </p>
+                            <a href="#contact" class="btn">詳細を問い合わせる</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="content-section bg-light">
+            <div class="container">
+                <h2 class="section-title">オフィス書店サービス料金</h2>
+                <p class="section-subtitle">
+                    シンプルで分かりやすい料金体系
+                </p>
+                
+                <div class="grid grid-3">
+                    <div class="card">
+                        <div class="card-content">
+                            <h3 class="card-title text-brand">選書プラン2</h3>
+                            <p class="card-text">オススメ15冊・選書15冊</p>
+                            <div class="pricing-info">
+                                <div class="price-item">
+                                    <span class="price-label">初期費用</span>
+                                    <span class="price-value text-brand">¥70,000</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-label">月額費用</span>
+                                    <span class="price-value text-brand">¥19,000</span>
+                                </div>
+                            </div>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check text-brand" aria-hidden="true"></i> 専門家による選書</li>
+                                <li><i class="fas fa-check text-brand" aria-hidden="true"></i> 2ヶ月に1回の入れ替え</li>
+                                <li><i class="fas fa-check text-brand" aria-hidden="true"></i> 定期ミーティング</li>
+                                <li><i class="fas fa-check text-brand" aria-hidden="true"></i> 読書会開催支援</li>
+                            </ul>
+                            <a href="#contact" class="btn">お問い合わせ</a>
                         </div>
                     </div>
 
-                    <div class="testimonial-card">
-                        <div class="company-logo">
-                            <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&w=200&q=80" alt="Treasure Data ロゴイメージ">
-                        </div>
-                        <h3>Treasure Data</h3>
-                        <blockquote class="testimonial-text">
-                            「少ないスペースを有効利用でき、買わなかった本が翌月に交換されていくシステムは大変重要です。」
-                        </blockquote>
-                        <div class="testimonial-effect">
-                            <span class="effect-label">導入効果</span>
-                            <span class="effect-text">スペース効率化・コスト削減</span>
-                        </div>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <div class="company-logo">
-                            <img src="https://images.unsplash.com/photo-1560472355-536de3962603?auto=format&fit=crop&w=200&q=80" alt="マイクロウェーブ ロゴイメージ">
-                        </div>
-                        <h3>マイクロウェーブ</h3>
-                        <blockquote class="testimonial-text">
-                            「毎月新たな本との出会いが生まれ、社員の成長のきっかけになるツールとして活用しています。」
-                        </blockquote>
-                        <div class="testimonial-effect">
-                            <span class="effect-label">導入効果</span>
-                            <span class="effect-text">社員成長・学習機会創出</span>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3 class="card-title text-brand">選書プラン3</h3>
+                            <p class="card-text">オススメ15冊・選書15冊</p>
+                            <div class="pricing-info">
+                                <div class="price-item">
+                                    <span class="price-label">初期費用</span>
+                                    <span class="price-value text-brand">¥70,000</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-label">月額費用</span>
+                                    <span class="price-value text-brand">¥15,000</span>
+                                </div>
+                            </div>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check text-brand" aria-hidden="true"></i> 専門家による選書</li>
+                                <li><i class="fas fa-check text-brand" aria-hidden="true"></i> 3ヶ月に1回の入れ替え</li>
+                                <li><i class="fas fa-check text-brand" aria-hidden="true"></i> リモートワーク対応</li>
+                                <li><i class="fas fa-check text-brand" aria-hidden="true"></i> 個人宅配送可能</li>
+                            </ul>
+                            <a href="#contact" class="btn">お問い合わせ</a>
                         </div>
                     </div>
 
-                    <div class="testimonial-card">
-                        <div class="company-logo">
-                            <img src="https://images.unsplash.com/photo-1549923746-c502d488b3ea?auto=format&fit=crop&w=200&q=80" alt="日の丸自動車興業 ロゴイメージ">
+                    <div class="card">
+                        <div class="card-content">
+                            <h3 class="card-title text-brand">おまかせプラン</h3>
+                            <p class="card-text">オススメ30冊</p>
+                            <div class="pricing-info">
+                                <div class="price-item">
+                                    <span class="price-label">初期費用</span>
+                                    <span class="price-value text-brand">¥70,000</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-label">月額費用</span>
+                                    <span class="price-value text-brand">¥15,000</span>
+                                </div>
+                            </div>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check text-brand" aria-hidden="true"></i> 専門家による選書</li>
+                                <li><i class="fas fa-check text-brand" aria-hidden="true"></i> 3ヶ月に1回の入れ替え</li>
+                                <li><i class="fas fa-check text-brand" aria-hidden="true"></i> 年払い対応</li>
+                                <li><i class="fas fa-check text-brand" aria-hidden="true"></i> 返送料別途</li>
+                            </ul>
+                            <a href="#contact" class="btn">お問い合わせ</a>
                         </div>
-                        <h3>日の丸自動車興業</h3>
-                        <blockquote class="testimonial-text">
-                            「異なる価値観で選ばれた本が読めることで、社員の価値観がアップデートされています。」
-                        </blockquote>
-                        <div class="testimonial-effect">
-                            <span class="effect-label">導入効果</span>
-                            <span class="effect-text">価値観アップデート・意識改革</span>
+                    </div>
+                </div>
+                
+                <div class="alert alert-info">
+                    <strong>注意:</strong> すべてのプランに配送料・返送料が別途かかります。詳細はお問い合わせください。
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="content-section">
+            <div class="container">
+                <h2 class="section-title">お客様の声</h2>
+                <p class="section-subtitle">
+                    多くの企業様にご利用いただいています
+                </p>
+                
+                <div class="grid grid-2">
+                    <blockquote class="card">
+                        <div class="card-content">
+                            <h3 class="card-title text-brand">Yahoo!JAPAN</h3>
+                            <p class="card-text">
+                                「オフィスに新しい本が常にあることで、社員が未知の価値観に触れ、別視点から物事を捉え直すきっかけになっています。」
+                            </p>
+                            <div class="testimonial-effect">
+                                <span class="effect-label">導入効果:</span>
+                                <span>社員の視野拡大・創造性向上</span>
+                            </div>
                         </div>
+                    </blockquote>
+
+                    <blockquote class="card">
+                        <div class="card-content">
+                            <h3 class="card-title text-brand">Treasure Data</h3>
+                            <p class="card-text">
+                                「少ないスペースを有効利用でき、買わなかった本が翌月に交換されていくシステムは大変重要です。」
+                            </p>
+                            <div class="testimonial-effect">
+                                <span class="effect-label">導入効果:</span>
+                                <span>スペース効率化・コスト削減</span>
+                            </div>
+                        </div>
+                    </blockquote>
+
+                    <blockquote class="card">
+                        <div class="card-content">
+                            <h3 class="card-title text-brand">マイクロウェーブ</h3>
+                            <p class="card-text">
+                                「毎月新たな本との出会いが生まれ、社員の成長のきっかけになるツールとして活用しています。」
+                            </p>
+                            <div class="testimonial-effect">
+                                <span class="effect-label">導入効果:</span>
+                                <span>社員成長・学習機会創出</span>
+                            </div>
+                        </div>
+                    </blockquote>
+
+                    <blockquote class="card">
+                        <div class="card-content">
+                            <h3 class="card-title text-brand">日の丸自動車興業</h3>
+                            <p class="card-text">
+                                「異なる価値観で選ばれた本が読めることで、社員の価値観がアップデートされています。」
+                            </p>
+                            <div class="testimonial-effect">
+                                <span class="effect-label">導入効果:</span>
+                                <span>価値観アップデート・意識改革</span>
+                            </div>
+                        </div>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="content-section bg-light">
+            <div class="container">
+                <h2 class="section-title">利用開始までの流れ</h2>
+                
+                <div class="grid grid-4">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <h3 class="step-title">お問い合わせ</h3>
+                        <p class="step-description">
+                            お問い合わせフォームから資料請求・相談をお申し込みください。
+                        </p>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <h3 class="step-title">ヒアリング</h3>
+                        <p class="step-description">
+                            御社の状況をヒアリングし、最適なプランをご提案いたします。
+                        </p>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <h3 class="step-title">ご契約</h3>
+                        <p class="step-description">
+                            プラン決定後、お申し込みいただきご契約となります。
+                        </p>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <h3 class="step-title">サービス開始</h3>
+                        <p class="step-description">
+                            書籍の選定・配送をして、サービス開始となります。
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 利用開始までの流れ -->
-        <section class="flow" aria-labelledby="flow-title">
+        <!-- About Section -->
+        <section id="about" class="content-section">
             <div class="container">
-                <h2 id="flow-title" class="section-title">利用開始までの流れ</h2>
-                <ol class="flow-steps">
-                    <li class="flow-step">
-                        <div class="step-number" aria-hidden="true">1</div>
-                        <div class="step-icon"><i class="fas fa-file-alt"></i></div>
-                        <h3>資料請求・お問い合わせ</h3>
-                        <p>お問い合わせ後、弊社担当よりご連絡いたします。</p>
-                    </li>
-                    <li class="flow-step">
-                        <div class="step-number" aria-hidden="true">2</div>
-                        <div class="step-icon"><i class="fas fa-handshake"></i></div>
-                        <h3>プランのご提案・お見積もり</h3>
-                        <p>現在の社内状況などをヒアリングし、最適なプランをご提案いたします。</p>
-                    </li>
-                    <li class="flow-step">
-                        <div class="step-number" aria-hidden="true">3</div>
-                        <div class="step-icon"><i class="fas fa-pen-alt"></i></div>
-                        <h3>プラン決定・ご契約</h3>
-                        <p>プラン決定後、お申し込みいただきご契約となります。</p>
-                    </li>
-                    <li class="flow-step">
-                        <div class="step-number" aria-hidden="true">4</div>
-                        <div class="step-icon"><i class="fas fa-rocket"></i></div>
-                        <h3>ご利用開始</h3>
-                        <p>ご契約後、書籍の選定をして配送させていただきます。</p>
-                    </li>
-                </ol>
-            </div>
-        </section>
-
-        <!-- 会社概要 -->
-        <section id="about" class="about" aria-labelledby="about-title">
-            <div class="container">
-                <h2 id="about-title" class="section-title">会社概要</h2>
-                <div class="about-content">
-                    <dl class="company-info-grid">
-                        <div class="info-item">
-                            <dt>会社名</dt>
-                            <dd>どこでも書店株式会社</dd>
-                        </div>
-                        <div class="info-item">
-                            <dt>資本金</dt>
-                            <dd>1,000,000円</dd>
-                        </div>
-                        <div class="info-item">
-                            <dt>代表</dt>
-                            <dd>山﨑 雅人</dd>
-                        </div>
-                        <div class="info-item">
-                            <dt>設立</dt>
-                            <dd>2025年2月14日</dd>
-                        </div>
-                        <div class="info-item">
-                            <dt>所在地</dt>
-                            <dd>東京都目黒区</dd>
-                        </div>
-                    </dl>
+                <h2 class="section-title">会社概要</h2>
+                
+                <div class="grid grid-2">
+                    <div class="company-info">
+                        <dl class="info-list">
+                            <div class="info-item">
+                                <dt>会社名</dt>
+                                <dd>どこでも書店株式会社</dd>
+                            </div>
+                            <div class="info-item">
+                                <dt>設立</dt>
+                                <dd>2025年2月14日</dd>
+                            </div>
+                            <div class="info-item">
+                                <dt>資本金</dt>
+                                <dd>1,000,000円</dd>
+                            </div>
+                            <div class="info-item">
+                                <dt>代表</dt>
+                                <dd>山﨑 雅人</dd>
+                            </div>
+                            <div class="info-item">
+                                <dt>所在地</dt>
+                                <dd>東京都目黒区</dd>
+                            </div>
+                        </dl>
+                    </div>
                     
                     <div class="business-overview">
-                        <h3>事業概要</h3>
-                        <ul>
-                            <li>オフィス書店サービス</li>
-                            <li>企業研修（企画・講師派遣）</li>
-                            <li>編集部立ち上げ支援</li>
+                        <h3 class="text-brand">事業内容</h3>
+                        <ul class="business-list">
+                            <li><i class="fas fa-store text-brand" aria-hidden="true"></i> オフィス書店サービス</li>
+                            <li><i class="fas fa-graduation-cap text-brand" aria-hidden="true"></i> 企業研修（企画・講師派遣）</li>
+                            <li><i class="fas fa-edit text-brand" aria-hidden="true"></i> 編集部立ち上げ支援</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- お知らせ -->
-        <section id="news" class="news" aria-labelledby="news-title">
+        <!-- Brief FAQ Section -->
+        <section class="content-section">
             <div class="container">
-                <h2 id="news-title" class="section-title">お知らせ</h2>
-                <div class="news-content">
-                    <p>最新情報はこちらでお知らせします</p>
-                    <div class="news-item">
-                        <time class="news-date" datetime="2025-02-14">2025年2月14日</time>
-                        <span class="news-title">どこでも書店株式会社を設立いたしました</span>
+                <h2 class="section-title">よくあるご質問</h2>
+                <p class="section-subtitle">
+                    サービスに関してよくお寄せいただく質問をまとめました
+                </p>
+                
+                <div class="faq-brief">
+                    <div class="faq-list">
+                        <details class="faq-item">
+                            <summary class="faq-question">
+                                オフィス書店サービスとはどのようなサービスですか？
+                                <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                            </summary>
+                            <div class="faq-answer">
+                                <p>企業のオフィス内に厳選された書籍を設置し、定期的に入れ替えるサービスです。専門家が御社の業界や課題に応じて本を選書し、社員の学習機会を創出します。</p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary class="faq-question">
+                                本の入れ替え頻度はどの程度ですか？
+                                <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                            </summary>
+                            <div class="faq-answer">
+                                <p>プランによって異なりますが、2〜3ヶ月に1回の頻度で入れ替えを行います。選書プラン2では2ヶ月に1回、選書プラン3とおまかせプランでは3ヶ月に1回の入れ替えとなります。</p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary class="faq-question">
+                                初期費用には何が含まれますか？
+                                <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                            </summary>
+                            <div class="faq-answer">
+                                <p>初期費用には、本棚の設置、初回書籍の選定・購入・配送、サービス開始のためのヒアリング・設定作業が含まれます。追加の設備費用などは一切かかりません。</p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary class="faq-question">
+                                導入までどの程度の期間がかかりますか？
+                                <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                            </summary>
+                            <div class="faq-answer">
+                                <p>お申し込みから導入まで、通常2〜3週間程度のお時間をいただいております。ヒアリング、選書、本棚設置の調整などを含めたスケジュールとなります。</p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary class="faq-question">
+                                企業研修はどのような内容ですか？
+                                <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                            </summary>
+                            <div class="faq-answer">
+                                <p>読書を通じた人材育成研修、著者招聘読書会、階層別研修、チームビルディング研修などを提供しております。御社のニーズに合わせてカスタマイズいたします。</p>
+                            </div>
+                        </details>
                     </div>
-                    <div class="news-item">
-                        <time class="news-date" datetime="2025-05">2025年5月予定</time>
-                        <span class="news-title">サービス開始予定</span>
+                    
+                    <div class="faq-more text-center">
+                        <p class="mb-3">その他のご質問については、詳しいFAQページをご覧ください。</p>
+                        <a href="faq2.html" class="btn btn-secondary">もっと見る</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- お問い合わせ -->
-        <section id="contact" class="contact" aria-labelledby="contact-title">
+        <!-- Contact Section -->
+        <section id="contact" class="content-section bg-light">
             <div class="container">
-                <h2 id="contact-title" class="section-title">お問い合わせ</h2>
-                <div class="contact-content">
-                    <p class="contact-intro">サービスに関するご質問、資料請求、お見積もりなど、お気軽にお問い合わせください。</p>
-                    
-                    <!-- formrun埋め込みフォーム -->
-                    <div class="formrun-embed" data-formrun-form="@your-form-id" data-formrun-redirect="true"></div>
-                    <script src="https://sdk.form.run/js/v2/embed.js"></script>
-                    
-                    <!-- formrunが読み込まれない場合のフォールバック -->
-                    <noscript>
-                        <div class="contact-fallback">
-                            <p>JavaScriptが無効になっているため、フォームが表示されません。</p>
-                            <p>お手数ですが、以下のメールアドレスまで直接お問い合わせください。</p>
-                            <p><strong>Email:</strong> <a href="mailto:support-toi@dokodemo-shoten.com">support-toi@dokodemo-shoten.com</a></p>
+                <h2 class="section-title">お問い合わせ</h2>
+                <p class="section-subtitle">
+                    サービスに関するご質問、資料請求、お見積もりなど、お気軽にお問い合わせください。
+                </p>
+                
+                <form class="contact-form" novalidate>
+                    <div class="grid grid-2">
+                        <div class="form-field">
+                            <label for="company">会社名 <span aria-label="必須" class="required">*</span></label>
+                            <input type="text" id="company" name="company" required>
                         </div>
-                    </noscript>
-                    
-                    <div class="contact-info">
-                        <h3>お問い合わせ先</h3>
-                        <p>Email: <a href="mailto:support-toi@dokodemo-shoten.com">support-toi@dokodemo-shoten.com</a></p>
-                        <p class="note">（返信は平日のみとなります）</p>
+                        
+                        <div class="form-field">
+                            <label for="name">お名前 <span aria-label="必須" class="required">*</span></label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-field">
+                            <label for="email">メールアドレス <span aria-label="必須" class="required">*</span></label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-field">
+                            <label for="phone">電話番号</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
                     </div>
+                    
+                    <div class="form-field">
+                        <label for="inquiry-type">お問い合わせ種別 <span aria-label="必須" class="required">*</span></label>
+                        <select id="inquiry-type" name="inquiry-type" required>
+                            <option value="">選択してください</option>
+                            <option value="資料請求">資料請求</option>
+                            <option value="無料相談">無料相談</option>
+                            <option value="見積もり依頼">見積もり依頼</option>
+                            <option value="その他">その他</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-field">
+                        <label for="message">お問い合わせ内容</label>
+                        <textarea id="message" name="message" rows="5"></textarea>
+                        <div class="form-help">具体的なご質問やご要望をお書きください</div>
+                    </div>
+                    
+                    <div class="form-field">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="privacy" required>
+                            <span class="checkmark"></span>
+                            <a href="privacy2.html">プライバシーポリシー</a>に同意する <span aria-label="必須" class="required">*</span>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-large">送信する</button>
+                </form>
+                
+                <div class="contact-info">
+                    <h3 class="text-brand">お問い合わせ先</h3>
+                    <p>Email: <a href="mailto:support-toi@dokodemo-shoten.com" class="text-brand">support-toi@dokodemo-shoten.com</a></p>
+                    <p class="note">返信は平日のみとなります</p>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- フッター -->
+    <!-- Footer -->
     <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-main">
-                    <div class="footer-logo">
-                        <div class="logo-icon" aria-hidden="true">
-                            <i class="fas fa-book-open"></i>
-                        </div>
-                        <h3>どこでも書店</h3>
-                        <p>開発元：どこでも書店株式会社</p>
-                    </div>
-                    <nav class="footer-links" aria-label="フッターナビゲーション">
-                        <ul>
-                            <li><a href="#services">サービス</a></li>
-                            <li><a href="#about">会社概要</a></li>
-                            <li><a href="#news">お知らせ</a></li>
-                            <li><a href="#contact">お問い合わせ</a></li>
-                        </ul>
-                        <ul>
-                            <li><a href="privacy.html">プライバシーポリシー</a></li>
-                            <li><a href="faq.html">よくあるご質問</a></li>
-                            <li><a href="terms.html">利用規約</a></li>
-                            <li><a href="cookie.html">Cookie設定</a></li>
-                        </ul>
-                    </nav>
+                <div class="footer-section">
+                    <h3>どこでも書店</h3>
+                    <p>本を通して社会や会社の未来を考える機会をつくる</p>
+                    <p>どこでも書店株式会社</p>
                 </div>
-                <div class="footer-bottom">
-                    <p>&copy; 2025 どこでも書店株式会社. All rights reserved.</p>
+                
+                <div class="footer-section">
+                    <h3>サービス</h3>
+                    <ul>
+                        <li><a href="#services">オフィス書店サービス</a></li>
+                        <li><a href="#services">企業研修</a></li>
+                        <li><a href="#services">編集コーチング</a></li>
+                    </ul>
                 </div>
+                
+                <div class="footer-section">
+                    <h3>サポート</h3>
+                    <ul>
+                        <li><a href="faq2.html">よくある質問</a></li>
+                        <li><a href="#contact">お問い合わせ</a></li>
+                        <li><a href="privacy2.html">プライバシーポリシー</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 どこでも書店株式会社. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script2.js"></script>
 </body>
 </html> 
