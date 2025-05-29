@@ -294,7 +294,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
     
     // アニメーション対象要素を監視
-    const animateElements = document.querySelectorAll('.service-card, .reason-item, .testimonial-card, .flow-step');
+    const animateElements = document.querySelectorAll('.problem-item, .service-card, .reason-item, .testimonial-card, .flow-step');
     animateElements.forEach(el => {
         observer.observe(el);
     });
