@@ -1,3 +1,16 @@
+/* CSS変数定義 */
+:root {
+    --primary-color: #2c5aa0;
+    --secondary-color: #1e3f73;
+    --accent-color: #4CAF50;
+    --text-color: #333;
+    --text-light: #666;
+    --background-light: #f8f9fa;
+    --border-color: #e9ecef;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-medium: rgba(0, 0, 0, 0.15);
+}
+
 /* リセットCSS */
 * {
     margin: 0;
@@ -176,13 +189,6 @@ body {
     font-weight: 500;
     color: #4a5568;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.hero-cta {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    flex-wrap: wrap;
 }
 
 .btn {
@@ -1273,9 +1279,10 @@ body {
         font-size: 1.8rem;
     }
     
-    .hero-cta {
+    .hero-buttons {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        gap: 1rem;
     }
     
     .company-logos {
@@ -2435,4 +2442,13 @@ textarea:focus {
     .optional-card {
         padding: 1.5rem;
     }
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
 } 
