@@ -1450,10 +1450,31 @@ body.menu-open .backdrop {
   top: calc(64px + var(--space-4));
 }
 
-.column-image img {
-  width: 100%;
-  border-radius: var(--radius);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+/* Mobile optimization for CEO column */
+@media (max-width: 767px) {
+  .column-content {
+    gap: var(--space-4);
+  }
+  
+  .column-image {
+    position: relative;
+    top: auto;
+    order: 2;
+    margin: var(--space-4) 0;
+  }
+  
+  .column-image img {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .column-text {
+    order: 1;
+  }
 }
 
 .column-text {
@@ -1720,17 +1741,124 @@ body.menu-open .backdrop {
 @media (max-width: 767px) {
   .ceo-title {
     font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: var(--space-6);
+  }
+  
+  .interview-section {
+    margin: var(--space-4) 0;
   }
   
   .question,
   .answer {
     flex-direction: column;
-    gap: var(--space-1);
+    gap: var(--space-2);
+    margin-bottom: var(--space-4);
+  }
+  
+  .question {
+    padding: var(--space-3);
+    background: var(--au-gray-light);
+    border-radius: var(--radius);
+    border-left: 4px solid var(--au-brand);
+  }
+  
+  .answer {
+    padding: var(--space-3);
+    margin-left: 0;
+    background: var(--au-white);
+    border-radius: var(--radius);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   }
   
   .q-mark,
   .a-mark {
     align-self: flex-start;
+    margin-bottom: var(--space-1);
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+  
+  .highlight-quote {
+    font-size: 16px;
+    padding: var(--space-3);
+    margin: var(--space-3) 0;
+  }
+  
+  .highlight-quote:before,
+  .highlight-quote:after {
+    font-size: 36px;
+  }
+  
+  .highlight-quote:before {
+    top: -5px;
+    left: var(--space-1);
+  }
+  
+  .highlight-quote:after {
+    bottom: -15px;
+    right: var(--space-1);
+  }
+  
+  .book-powers {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+  }
+  
+  .power-item {
+    padding: var(--space-2);
+  }
+  
+  .power-item h4 {
+    font-size: 16px;
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+  
+  .power-item i {
+    font-size: 20px;
+  }
+  
+  .case-examples {
+    gap: var(--space-3);
+  }
+  
+  .case-item {
+    padding: var(--space-3);
+  }
+  
+  .case-metric {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-1);
+    padding: var(--space-2);
+  }
+  
+  .metric-number {
+    font-size: 24px;
+  }
+  
+  .column-conclusion {
+    padding: var(--space-4);
+    margin-top: var(--space-6);
+  }
+  
+  .column-conclusion h4 {
+    font-size: 20px;
+  }
+  
+  .column-conclusion p {
+    font-size: 16px;
+  }
+  
+  .ceo-signature {
+    margin-top: var(--space-4);
+    padding-top: var(--space-3);
+  }
+  
+  .signature-name {
+    font-size: 20px;
   }
   
   .benefit-stat {
@@ -1873,5 +2001,38 @@ body.menu-open .backdrop {
   
   .hero-english-text::after {
     transform: translate(50%, -50%) translateX(80px);
+  }
+}
+
+/* Mobile CEO column specific improvements */
+@media (max-width: 767px) {
+  #ceo-column {
+    padding: var(--space-6) 0;
+  }
+  
+  #ceo-column .section-header {
+    margin-bottom: var(--space-4);
+  }
+  
+  #ceo-column .section-title {
+    font-size: clamp(24px, 6vw, 32px);
+    line-height: 1.3;
+    margin-bottom: var(--space-3);
+  }
+  
+  #ceo-column .section-subtitle {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: var(--space-4);
+  }
+  
+  .answer-content p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: var(--space-2);
+  }
+  
+  .answer-content p:last-child {
+    margin-bottom: 0;
   }
 } 
