@@ -515,30 +515,264 @@ body {
     background: #f7fafc;
 }
 
-.reasons-grid {
+/* なぜ本が解決策なのかセクション */
+.why-books {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.why-books::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/><circle cx="10" cy="60" r="0.5" fill="white" opacity="0.1"/><circle cx="90" cy="40" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    pointer-events: none;
+}
+
+.why-books-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+    z-index: 2;
+}
+
+.why-books-header .section-title {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.highlight-text {
+    background: linear-gradient(45deg, #ffd700, #ffed4e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
+
+.why-books-header .section-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.why-books-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* 比較セクション */
+.comparison-section {
+    margin-bottom: 4rem;
+}
+
+.comparison-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: white;
+    font-weight: 600;
+}
+
+.comparison-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.reason-item {
-    background: white;
+.comparison-item {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
     padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
 }
 
-.reason-item h3 {
+.comparison-item:hover {
+    transform: translateY(-5px);
+}
+
+.comparison-item.old {
+    border-left: 4px solid #ff6b6b;
+}
+
+.comparison-item.new {
+    border-left: 4px solid #4ecdc4;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.comparison-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.comparison-item h4 {
     font-size: 1.3rem;
-    color: #2c5aa0;
+    margin-bottom: 1.5rem;
+    color: white;
+    font-weight: 600;
+}
+
+.comparison-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.comparison-item li {
+    padding: 0.5rem 0;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* ベネフィットグリッド */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.benefit-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.benefit-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #ffd700, #ffed4e);
+}
+
+.benefit-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.benefit-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.benefit-card h3 {
+    font-size: 1.4rem;
+    color: white;
     margin-bottom: 1rem;
     font-weight: 600;
-    line-height: 1.4;
 }
 
-.reason-item p {
-    color: #4a5568;
+.benefit-card p {
+    color: rgba(255, 255, 255, 0.9);
     line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.benefit-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffd700;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+}
+
+.benefit-example {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 10px;
+    border-left: 3px solid #ffd700;
+}
+
+.benefit-example span {
+    font-style: italic;
+    color: #ffd700;
+    font-weight: 500;
+}
+
+/* 結論セクション */
+.why-books-conclusion {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+}
+
+.why-books-conclusion::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #ffd700, #ffed4e);
+    border-radius: 2px;
+}
+
+.conclusion-content h3 {
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.conclusion-text {
+    font-size: 1.3rem;
+    color: white;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+.conclusion-cta {
+    background: rgba(255, 215, 0, 0.2);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.conclusion-cta p {
+    font-size: 1.1rem;
+    color: white;
+    margin: 0;
+    font-weight: 500;
 }
 
 /* 導入企業の声 */
@@ -1173,6 +1407,36 @@ body {
     .purpose-table td {
         padding: 0.5rem;
     }
+    
+    .why-books {
+        padding: 3rem 0;
+    }
+    
+    .why-books-header .section-title {
+        font-size: 2rem;
+    }
+    
+    .comparison-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .benefit-card {
+        padding: 2rem;
+    }
+    
+    .why-books-conclusion {
+        padding: 2rem;
+    }
+    
+    .conclusion-text {
+        font-size: 1.1rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1235,4 +1499,43 @@ body {
         overflow-x: auto;
         white-space: nowrap;
     }
+    
+    .comparison-item,
+    .benefit-card {
+        padding: 1.5rem;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .benefit-icon {
+        font-size: 2.5rem;
+    }
+}
+
+.reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.reason-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.reason-item h3 {
+    font-size: 1.3rem;
+    color: #2c5aa0;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.reason-item p {
+    color: #4a5568;
+    line-height: 1.6;
 } 
