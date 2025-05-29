@@ -1,43 +1,99 @@
 // DOM読み込み完了後に実行
 document.addEventListener('DOMContentLoaded', function() {
     
-    // ハンバーガーメニューの制御
+    // ハンバーガーメニューの制御（キーボード対応）
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
     
     if (hamburger && navMenu) {
+        // クリックイベント
         hamburger.addEventListener('click', function() {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
+            toggleMenu();
         });
         
-        // メニューリンクをクリックしたときにメニューを閉じる
-        const navLinks = document.querySelectorAll('.nav-menu a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
-            });
+        // キーボードイベント（Enter、Space）
+        hamburger.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleMenu();
+            }
+        });
+        
+        // Escapeキーでメニューを閉じる
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                toggleMenu();
+                hamburger.focus(); // フォーカスをハンバーガーボタンに戻す
+            }
+        });
+        
+        function toggleMenu() {
+            const isOpen = navMenu.classList.contains('active');
+            
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+            
+            // aria-expanded属性を更新
+            hamburger.setAttribute('aria-expanded', !isOpen);
+            
+            // aria-labelを更新
+            hamburger.setAttribute('aria-label', !isOpen ? 'メニューを閉じる' : 'メニューを開く');
+            
+            // メニューが開いた時の処理
+            if (!isOpen) {
+                // 最初のメニュー項目にフォーカス
+                const firstMenuItem = navMenu.querySelector('a');
+                if (firstMenuItem) {
+                    firstMenuItem.focus();
+                }
+            }
+        }
+        
+        // メニュー内でのTab移動制御
+        navMenu.addEventListener('keydown', function(e) {
+            if (e.key === 'Tab') {
+                const menuItems = navMenu.querySelectorAll('a');
+                const firstItem = menuItems[0];
+                const lastItem = menuItems[menuItems.length - 1];
+                
+                if (e.shiftKey && document.activeElement === firstItem) {
+                    e.preventDefault();
+                    lastItem.focus();
+                } else if (!e.shiftKey && document.activeElement === lastItem) {
+                    e.preventDefault();
+                    firstItem.focus();
+                }
+            }
         });
     }
     
-    // スムーススクロール
-    const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
-    smoothScrollLinks.forEach(link => {
+    // スムーススクロール（アクセシビリティ対応）
+    const links = document.querySelectorAll('a[href^="#"]');
+    
+    links.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
             
             if (targetElement) {
-                const headerHeight = document.querySelector('.header').offsetHeight;
-                const targetPosition = targetElement.offsetTop - headerHeight - 20;
+                // prefers-reduced-motionを確認
+                const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
                 
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
+                targetElement.scrollIntoView({
+                    behavior: prefersReducedMotion ? 'auto' : 'smooth',
+                    block: 'start'
                 });
+                
+                // フォーカスを移動（スクリーンリーダー対応）
+                targetElement.setAttribute('tabindex', '-1');
+                targetElement.focus();
+                
+                // 一時的なtabindexを削除
+                setTimeout(() => {
+                    targetElement.removeAttribute('tabindex');
+                }, 100);
             }
         });
     });
@@ -58,105 +114,164 @@ document.addEventListener('DOMContentLoaded', function() {
         lastScrollTop = scrollTop;
     });
     
-    // フォーム送信処理
+    // フォームバリデーション（アクセシビリティ対応）
     const contactForm = document.querySelector('.contact-form');
+    
     if (contactForm) {
+        const formFields = {
+            company: {
+                element: contactForm.querySelector('#company'),
+                errorElement: contactForm.querySelector('#company-error'),
+                validate: (value) => {
+                    if (!value.trim()) return '会社名を入力してください';
+                    if (value.trim().length < 2) return '会社名は2文字以上で入力してください';
+                    return '';
+                }
+            },
+            name: {
+                element: contactForm.querySelector('#name'),
+                errorElement: contactForm.querySelector('#name-error'),
+                validate: (value) => {
+                    if (!value.trim()) return 'お名前を入力してください';
+                    if (value.trim().length < 2) return 'お名前は2文字以上で入力してください';
+                    return '';
+                }
+            },
+            email: {
+                element: contactForm.querySelector('#email'),
+                errorElement: contactForm.querySelector('#email-error'),
+                validate: (value) => {
+                    if (!value.trim()) return 'メールアドレスを入力してください';
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(value)) return '正しいメールアドレスを入力してください';
+                    return '';
+                }
+            },
+            'inquiry-type': {
+                element: contactForm.querySelector('#inquiry-type'),
+                errorElement: contactForm.querySelector('#inquiry-type-error'),
+                validate: (value) => {
+                    if (!value) return 'お問い合わせ種別を選択してください';
+                    return '';
+                }
+            },
+            privacy: {
+                element: contactForm.querySelector('input[name="privacy"]'),
+                errorElement: contactForm.querySelector('#privacy-error'),
+                validate: (checked) => {
+                    if (!checked) return '個人情報の取扱いについて同意してください';
+                    return '';
+                }
+            }
+        };
+
+        // リアルタイムバリデーション
+        Object.keys(formFields).forEach(fieldName => {
+            const field = formFields[fieldName];
+            
+            if (field.element) {
+                const eventType = field.element.type === 'checkbox' ? 'change' : 'blur';
+                
+                field.element.addEventListener(eventType, function() {
+                    validateField(fieldName);
+                });
+                
+                // 入力中のエラークリア（テキストフィールドのみ）
+                if (field.element.type === 'text' || field.element.type === 'email') {
+                    field.element.addEventListener('input', function() {
+                        if (field.errorElement.textContent) {
+                            clearFieldError(fieldName);
+                        }
+                    });
+                }
+            }
+        });
+
+        function validateField(fieldName) {
+            const field = formFields[fieldName];
+            if (!field || !field.element) return true;
+
+            const value = field.element.type === 'checkbox' ? field.element.checked : field.element.value;
+            const errorMessage = field.validate(value);
+
+            if (errorMessage) {
+                showFieldError(fieldName, errorMessage);
+                return false;
+            } else {
+                clearFieldError(fieldName);
+                return true;
+            }
+        }
+
+        function showFieldError(fieldName, message) {
+            const field = formFields[fieldName];
+            if (field.errorElement) {
+                field.errorElement.textContent = message;
+                field.element.setAttribute('aria-invalid', 'true');
+                field.element.setAttribute('aria-describedby', field.errorElement.id);
+            }
+        }
+
+        function clearFieldError(fieldName) {
+            const field = formFields[fieldName];
+            if (field.errorElement) {
+                field.errorElement.textContent = '';
+                field.element.setAttribute('aria-invalid', 'false');
+            }
+        }
+
+        // フォーム送信処理
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // フォームデータの取得
-            const formData = new FormData(this);
-            const formObject = {};
+            let isValid = true;
             
-            for (let [key, value] of formData.entries()) {
-                formObject[key] = value;
-            }
-            
-            // バリデーション
-            if (validateForm(formObject)) {
-                // 送信処理（実際の実装では適切なエンドポイントに送信）
-                showMessage('お問い合わせを受け付けました。担当者より3営業日以内にご連絡いたします。', 'success');
-                this.reset();
+            // 全フィールドをバリデーション
+            Object.keys(formFields).forEach(fieldName => {
+                if (!validateField(fieldName)) {
+                    isValid = false;
+                }
+            });
+
+            if (isValid) {
+                // フォーム送信処理（実際の送信ロジックをここに実装）
+                showSuccessMessage();
+                contactForm.reset();
+                
+                // エラーメッセージをクリア
+                Object.keys(formFields).forEach(fieldName => {
+                    clearFieldError(fieldName);
+                });
+            } else {
+                // 最初のエラーフィールドにフォーカス
+                const firstErrorField = Object.keys(formFields).find(fieldName => {
+                    const field = formFields[fieldName];
+                    return field.errorElement && field.errorElement.textContent;
+                });
+                
+                if (firstErrorField) {
+                    formFields[firstErrorField].element.focus();
+                }
             }
         });
-    }
-    
-    // フォームバリデーション
-    function validateForm(data) {
-        const errors = [];
-        
-        if (!data.company || data.company.trim() === '') {
-            errors.push('会社名を入力してください。');
+
+        function showSuccessMessage() {
+            // 成功メッセージを表示（アクセシブルな方法で）
+            const successMessage = document.createElement('div');
+            successMessage.setAttribute('role', 'alert');
+            successMessage.setAttribute('aria-live', 'polite');
+            successMessage.className = 'success-message';
+            successMessage.textContent = 'お問い合わせを送信しました。ありがとうございます。';
+            
+            contactForm.insertBefore(successMessage, contactForm.firstChild);
+            
+            // 3秒後にメッセージを削除
+            setTimeout(() => {
+                if (successMessage.parentNode) {
+                    successMessage.parentNode.removeChild(successMessage);
+                }
+            }, 3000);
         }
-        
-        if (!data.name || data.name.trim() === '') {
-            errors.push('お名前を入力してください。');
-        }
-        
-        if (!data.email || data.email.trim() === '') {
-            errors.push('メールアドレスを入力してください。');
-        } else if (!isValidEmail(data.email)) {
-            errors.push('正しいメールアドレスを入力してください。');
-        }
-        
-        if (!data['inquiry-type'] || data['inquiry-type'] === '') {
-            errors.push('お問い合わせ種別を選択してください。');
-        }
-        
-        if (!data.privacy) {
-            errors.push('個人情報の取扱いについて同意してください。');
-        }
-        
-        if (errors.length > 0) {
-            showMessage(errors.join('\n'), 'error');
-            return false;
-        }
-        
-        return true;
-    }
-    
-    // メールアドレスの形式チェック
-    function isValidEmail(email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-    }
-    
-    // メッセージ表示
-    function showMessage(message, type) {
-        // 既存のメッセージを削除
-        const existingMessage = document.querySelector('.form-message');
-        if (existingMessage) {
-            existingMessage.remove();
-        }
-        
-        // メッセージ要素を作成
-        const messageDiv = document.createElement('div');
-        messageDiv.className = `form-message ${type}`;
-        messageDiv.style.cssText = `
-            padding: 1rem;
-            margin: 1rem 0;
-            border-radius: 6px;
-            font-weight: 500;
-            ${type === 'success' 
-                ? 'background: #f0fff4; color: #22543d; border: 1px solid #9ae6b4;' 
-                : 'background: #fed7d7; color: #742a2a; border: 1px solid #feb2b2;'
-            }
-        `;
-        messageDiv.textContent = message;
-        
-        // フォームの前に挿入
-        const form = document.querySelector('.contact-form');
-        form.parentNode.insertBefore(messageDiv, form);
-        
-        // 5秒後に自動削除
-        setTimeout(() => {
-            if (messageDiv.parentNode) {
-                messageDiv.remove();
-            }
-        }, 5000);
-        
-        // メッセージ位置にスクロール
-        messageDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
     
     // アニメーション効果（スクロール時に要素を表示）
@@ -166,6 +281,11 @@ document.addEventListener('DOMContentLoaded', function() {
     };
     
     const observer = new IntersectionObserver(function(entries) {
+        // prefers-reduced-motionを確認
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        
+        if (prefersReducedMotion) return; // アニメーションを無効化
+        
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('animate-in');
@@ -174,7 +294,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
     
     // アニメーション対象要素を監視
-    const animateElements = document.querySelectorAll('.problem-item, .reason-item, .testimonial-item, .flow-step, .feature');
+    const animateElements = document.querySelectorAll('.service-card, .reason-item, .testimonial-card, .flow-step');
     animateElements.forEach(el => {
         observer.observe(el);
     });

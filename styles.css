@@ -1541,4 +1541,119 @@ body {
 .reason-item p {
     color: #4a5568;
     line-height: 1.6;
+}
+
+/* アクセシビリティ対応 */
+
+/* スキップリンク */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 1000;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.skip-link:focus {
+    top: 6px;
+}
+
+/* フォーカス表示の改善 */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #2c5aa0;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(44, 90, 160, 0.2);
+}
+
+/* ハンバーガーメニューのキーボード対応 */
+.hamburger:focus {
+    outline: 2px solid #2c5aa0;
+    outline-offset: 2px;
+    background-color: rgba(44, 90, 160, 0.1);
+}
+
+/* エラーメッセージスタイル */
+.error-message {
+    color: #d32f2f;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: block;
+    min-height: 1.2em;
+}
+
+.form-group input:invalid:not(:focus):not(:placeholder-shown) + .error-message,
+.form-group select:invalid:not(:focus) + .error-message {
+    display: block;
+}
+
+.form-group input:invalid:not(:focus):not(:placeholder-shown),
+.form-group select:invalid:not(:focus) {
+    border-color: #d32f2f;
+    box-shadow: 0 0 0 2px rgba(211, 47, 47, 0.2);
+}
+
+/* 必須フィールドの視覚的表示 */
+.required {
+    color: #d32f2f;
+    font-weight: bold;
+}
+
+/* ロゴテキストのスタイル調整 */
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2c5aa0;
+    margin-bottom: 0.25rem;
+}
+
+/* 高コントラストモード対応 */
+@media (prefers-contrast: high) {
+    .btn-primary {
+        background-color: #000;
+        border-color: #000;
+        color: #fff;
+    }
+    
+    .btn-secondary {
+        background-color: #fff;
+        border-color: #000;
+        color: #000;
+    }
+    
+    .highlight {
+        background-color: #ffff00;
+        color: #000;
+    }
+}
+
+/* 動きを減らす設定への対応 */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* 成功メッセージスタイル */
+.success-message {
+    background-color: #f0fff4;
+    color: #22543d;
+    border: 1px solid #9ae6b4;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    font-weight: 500;
 } 

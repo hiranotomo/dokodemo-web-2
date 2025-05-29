@@ -9,504 +9,519 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- スキップリンク -->
+    <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
+    
     <!-- ヘッダー -->
-    <header class="header">
-        <nav class="nav">
+    <header class="header" role="banner">
+        <nav class="nav" role="navigation" aria-label="メインナビゲーション">
             <div class="nav-container">
                 <div class="logo">
-                    <h1>どこでも書店</h1>
+                    <div class="logo-text">どこでも書店</div>
                     <p class="tagline">本を通して社会や会社の未来を考える機会をつくる</p>
                 </div>
-                <ul class="nav-menu">
+                <ul class="nav-menu" id="nav-menu">
                     <li><a href="#services">サービス</a></li>
                     <li><a href="#about">会社概要</a></li>
                     <li><a href="#news">お知らせ</a></li>
                     <li><a href="#contact" class="cta-button">お問い合わせ</a></li>
                 </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+                <button class="hamburger" 
+                        aria-controls="nav-menu" 
+                        aria-expanded="false" 
+                        aria-label="メニューを開く"
+                        type="button">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </button>
             </div>
         </nav>
     </header>
 
-    <!-- ヒーローセクション -->
-    <section class="hero">
-        <div class="hero-background">
-            <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=1200&q=80" alt="オフィスの本棚と読書環境" class="hero-bg-image">
-        </div>
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    <span class="highlight">どこでも書店</span>で<br>
-                    企業の成長を加速させる
-                </h1>
-                <p class="hero-subtitle">
-                    オフィス書店サービス・企業研修・編集コーチングで<br>
-                    あなたの会社の「学ぶ文化」を創造します
-                </p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">無料相談を申し込む</a>
-                    <a href="#services" class="btn btn-secondary">サービス詳細を見る</a>
-                </div>
+    <!-- メインコンテンツ -->
+    <main id="main-content" role="main">
+        <!-- ヒーローセクション -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-background" aria-hidden="true">
+                <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=1200&q=80" alt="" class="hero-bg-image">
             </div>
-        </div>
-    </section>
-
-    <!-- 課題提起セクション -->
-    <section class="problems">
-        <div class="container">
-            <h2 class="section-title">社長・人事・教育管理者のみなさん、<br>こんな悩みを抱えていませんか？</h2>
-            <div class="problems-grid">
-                <div class="problem-item">社員のビジネスレベルを上げたい</div>
-                <div class="problem-item">自ら学習する人材へ育成したい</div>
-                <div class="problem-item">社員教育がうまくいかない</div>
-                <div class="problem-item">会社の生産性を上げたい</div>
-                <div class="problem-item">社員の仕事の取り組む姿勢を変えたい</div>
-                <div class="problem-item">社員が成長する機会が欲しい</div>
-                <div class="problem-item">社員が本を読む環境を作りたい</div>
-                <div class="problem-item">社員教育が追いついてない</div>
-                <div class="problem-item">会社の伸びがイマイチだ</div>
-            </div>
-            <div class="solution-intro">
-                <h3>私たちどこでも書店にお任せください</h3>
-                <p>3つのサービスで、企業の学習環境と成長をトータルサポートします</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- なぜ本が解決策なのか -->
-    <section class="why-books">
-        <div class="container">
-            <div class="why-books-header">
-                <h2 class="section-title">なぜ「本」が企業課題の<br><span class="highlight-text">最強の解決策</span>なのか？</h2>
-                <p class="section-subtitle">従来の研修では得られない、本だけが持つ4つの力</p>
-            </div>
-
-            <div class="why-books-content">
-                <div class="comparison-section">
-                    <h3 class="comparison-title">従来の研修 vs 本による学習</h3>
-                    <div class="comparison-grid">
-                        <div class="comparison-item old">
-                            <div class="comparison-icon">❌</div>
-                            <h4>従来の研修</h4>
-                            <ul>
-                                <li>一過性（終われば忘れる）</li>
-                                <li>画一的（個人に最適化されない）</li>
-                                <li>受動的（聞くだけ）</li>
-                                <li>高コスト（1回50万円〜）</li>
-                            </ul>
-                        </div>
-                        <div class="comparison-item new">
-                            <div class="comparison-icon">✅</div>
-                            <h4>本による学習</h4>
-                            <ul>
-                                <li>継続性（繰り返し学習可能）</li>
-                                <li>個別最適（個人のペースで）</li>
-                                <li>能動的（自発的な学習）</li>
-                                <li>低コスト（1冊1,500円）</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="benefits-grid">
-                    <div class="benefit-card">
-                        <div class="benefit-icon">🧠</div>
-                        <h3>脳科学的効果</h3>
-                        <p>読書は脳の複数領域を同時活性化し、深い思考力と集中力を養います。記憶の定着率も講義の3倍以上。</p>
-                        <div class="benefit-stat">
-                            <span class="stat-number">3倍</span>
-                            <span class="stat-label">記憶定着率</span>
-                        </div>
-                    </div>
-
-                    <div class="benefit-card">
-                        <div class="benefit-icon">💬</div>
-                        <h3>コミュニケーション革命</h3>
-                        <p>同じ本を読んだ社員同士の自然な対話が生まれ、部署を超えた知的交流が促進されます。</p>
-                        <div class="benefit-example">
-                            <span>「あの本の第3章の話だけど...」</span>
-                        </div>
-                    </div>
-
-                    <div class="benefit-card">
-                        <div class="benefit-icon">📈</div>
-                        <h3>圧倒的ROI</h3>
-                        <p>1冊1,500円で長期間の学習効果。複数人で共有でき、組織全体の知的レベルが向上します。</p>
-                        <div class="benefit-stat">
-                            <span class="stat-number">1/30</span>
-                            <span class="stat-label">研修コスト比</span>
-                        </div>
-                    </div>
-
-                    <div class="benefit-card">
-                        <div class="benefit-icon">🌱</div>
-                        <h3>組織文化の変革</h3>
-                        <p>「学ぶ組織」への自然な変化。社員の自発性向上と、イノベーションが生まれる土壌を形成。</p>
-                        <div class="benefit-example">
-                            <span>自走する学習組織の構築</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="why-books-conclusion">
-                    <div class="conclusion-content">
-                        <h3>つまり、本は...</h3>
-                        <p class="conclusion-text">
-                            <strong>最も費用対効果が高く、持続可能で、<br>
-                            個人と組織の両方を成長させる学習ツール</strong>
-                        </p>
-                        <div class="conclusion-cta">
-                            <p>だからこそ、どこでも書店の<span class="highlight-text">プロの選書</span>と<span class="highlight-text">継続サポート</span>が必要なのです</p>
-                        </div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1 id="hero-title" class="hero-title">
+                        <span class="highlight">どこでも書店</span>で<br>
+                        企業の成長を加速させる
+                    </h1>
+                    <p class="hero-subtitle">
+                        オフィス書店サービス・企業研修・編集コーチングで<br>
+                        あなたの会社の「学ぶ文化」を創造します
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">無料相談を申し込む</a>
+                        <a href="#services" class="btn btn-secondary">サービス詳細を見る</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- サービス紹介 -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title">3つのサービス</h2>
-            <p class="section-subtitle">企業の成長段階に合わせた最適なソリューションを提供</p>
-            
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80" alt="オフィス書店サービス - 本棚のある職場環境">
-                    </div>
-                    <div class="service-content">
-                        <div class="service-icon">📚</div>
-                        <h3>オフィス書店サービス</h3>
-                        <p>3ステップで簡単にオフィス内に書店を開設。厳選された書籍で社員の学習意欲を向上させます。</p>
-                        
-                        <div class="service-plans">
-                            <div class="plan">
-                                <h4>📖 15冊プラン</h4>
-                                <p class="plan-price">月額 <span>5,000円</span>〜</p>
+        <!-- 課題提起セクション -->
+        <section class="problems" aria-labelledby="problems-title">
+            <div class="container">
+                <h2 id="problems-title" class="section-title">社長・人事・教育管理者のみなさん、<br>こんな悩みを抱えていませんか？</h2>
+                <div class="problems-grid" role="list">
+                    <div class="problem-item" role="listitem">社員のビジネスレベルを上げたい</div>
+                    <div class="problem-item" role="listitem">自ら学習する人材へ育成したい</div>
+                    <div class="problem-item" role="listitem">社員教育がうまくいかない</div>
+                    <div class="problem-item" role="listitem">会社の生産性を上げたい</div>
+                    <div class="problem-item" role="listitem">社員の仕事の取り組む姿勢を変えたい</div>
+                    <div class="problem-item" role="listitem">社員が成長する機会が欲しい</div>
+                    <div class="problem-item" role="listitem">社員が本を読む環境を作りたい</div>
+                    <div class="problem-item" role="listitem">社員教育が追いついてない</div>
+                    <div class="problem-item" role="listitem">会社の伸びがイマイチだ</div>
+                </div>
+                <div class="solution-intro">
+                    <h3>私たちどこでも書店にお任せください</h3>
+                    <p>3つのサービスで、企業の学習環境と成長をトータルサポートします</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- なぜ本が解決策なのか -->
+        <section class="why-books" aria-labelledby="why-books-title">
+            <div class="container">
+                <div class="why-books-header">
+                    <h2 id="why-books-title" class="section-title">なぜ「本」が企業課題の<br><span class="highlight-text">最強の解決策</span>なのか？</h2>
+                    <p class="section-subtitle">従来の研修では得られない、本だけが持つ4つの力</p>
+                </div>
+
+                <div class="why-books-content">
+                    <div class="comparison-section">
+                        <h3 class="comparison-title">従来の研修 vs 本による学習</h3>
+                        <div class="comparison-grid">
+                            <div class="comparison-item old">
+                                <div class="comparison-icon" aria-hidden="true">❌</div>
+                                <h4>従来の研修</h4>
                                 <ul>
-                                    <li>毎月15冊の厳選書籍</li>
-                                    <li>本棚設置サポート</li>
-                                    <li>読書会開催支援</li>
+                                    <li>一過性（終われば忘れる）</li>
+                                    <li>画一的（個人に最適化されない）</li>
+                                    <li>受動的（聞くだけ）</li>
+                                    <li>高コスト（1回50万円〜）</li>
                                 </ul>
                             </div>
-                            
-                            <div class="plan">
-                                <h4>📘 5冊プラン</h4>
-                                <p class="plan-price">月額 <span>2,000円</span>〜</p>
+                            <div class="comparison-item new">
+                                <div class="comparison-icon" aria-hidden="true">✅</div>
+                                <h4>本による学習</h4>
                                 <ul>
-                                    <li>リモートワーク対応</li>
-                                    <li>個人宅配送可能</li>
-                                    <li>コンパクトな導入</li>
+                                    <li>継続性（繰り返し学習可能）</li>
+                                    <li>個別最適（個人のペースで）</li>
+                                    <li>能動的（自発的な学習）</li>
+                                    <li>低コスト（1冊1,500円）</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="service-card">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" alt="企業研修 - 会議室での研修風景">
-                    </div>
-                    <div class="service-content">
-                        <div class="service-icon">🎯</div>
-                        <h3>企業研修</h3>
-                        <p>読書会の企画・運営から研修プログラムまで、企業の人材育成をトータルサポートします。</p>
-                        
-                        <div class="service-features">
-                            <div class="feature">
-                                <h4>📖 読書会企画・運営</h4>
-                                <p>著者を招いた読書会や社内読書会の企画・運営をサポート</p>
+                    <div class="benefits-grid">
+                        <div class="benefit-card">
+                            <div class="benefit-icon" aria-hidden="true">🧠</div>
+                            <h3>脳科学的効果</h3>
+                            <p>読書は脳の複数領域を同時活性化し、深い思考力と集中力を養います。記憶の定着率も講義の3倍以上。</p>
+                            <div class="benefit-stat">
+                                <span class="stat-number">3倍</span>
+                                <span class="stat-label">記憶定着率</span>
                             </div>
-                            
-                            <div class="feature">
-                                <h4>🎓 研修プログラム</h4>
-                                <p>企業のニーズに合わせたカスタマイズ研修を提供</p>
+                        </div>
+
+                        <div class="benefit-card">
+                            <div class="benefit-icon" aria-hidden="true">💬</div>
+                            <h3>コミュニケーション革命</h3>
+                            <p>同じ本を読んだ社員同士の自然な対話が生まれ、部署を超えた知的交流が促進されます。</p>
+                            <div class="benefit-example">
+                                <span>「あの本の第3章の話だけど...」</span>
+                            </div>
+                        </div>
+
+                        <div class="benefit-card">
+                            <div class="benefit-icon" aria-hidden="true">📈</div>
+                            <h3>圧倒的ROI</h3>
+                            <p>1冊1,500円で長期間の学習効果。複数人で共有でき、組織全体の知的レベルが向上します。</p>
+                            <div class="benefit-stat">
+                                <span class="stat-number">1/30</span>
+                                <span class="stat-label">研修コスト比</span>
+                            </div>
+                        </div>
+
+                        <div class="benefit-card">
+                            <div class="benefit-icon" aria-hidden="true">🌱</div>
+                            <h3>組織文化の変革</h3>
+                            <p>「学ぶ組織」への自然な変化。社員の自発性向上と、イノベーションが生まれる土壌を形成。</p>
+                            <div class="benefit-example">
+                                <span>自走する学習組織の構築</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="why-books-conclusion">
+                        <div class="conclusion-content">
+                            <h3>つまり、本は...</h3>
+                            <p class="conclusion-text">
+                                <strong>最も費用対効果が高く、持続可能で、<br>
+                                個人と組織の両方を成長させる学習ツール</strong>
+                            </p>
+                            <div class="conclusion-cta">
+                                <p>だからこそ、どこでも書店の<span class="highlight-text">プロの選書</span>と<span class="highlight-text">継続サポート</span>が必要なのです</p>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="service-card">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80" alt="編集コーチング - ライティングと編集作業">
+        <!-- サービス紹介 -->
+        <section id="services" class="services">
+            <div class="container">
+                <h2 class="section-title">3つのサービス</h2>
+                <p class="section-subtitle">企業の成長段階に合わせた最適なソリューションを提供</p>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80" alt="オフィス書店サービス - 本棚のある職場環境">
+                        </div>
+                        <div class="service-content">
+                            <div class="service-icon">📚</div>
+                            <h3>オフィス書店サービス</h3>
+                            <p>3ステップで簡単にオフィス内に書店を開設。厳選された書籍で社員の学習意欲を向上させます。</p>
+                            
+                            <div class="service-plans">
+                                <div class="plan">
+                                    <h4>📖 15冊プラン</h4>
+                                    <p class="plan-price">月額 <span>5,000円</span>〜</p>
+                                    <ul>
+                                        <li>毎月15冊の厳選書籍</li>
+                                        <li>本棚設置サポート</li>
+                                        <li>読書会開催支援</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="plan">
+                                    <h4>📘 5冊プラン</h4>
+                                    <p class="plan-price">月額 <span>2,000円</span>〜</p>
+                                    <ul>
+                                        <li>リモートワーク対応</li>
+                                        <li>個人宅配送可能</li>
+                                        <li>コンパクトな導入</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="service-content">
-                        <div class="service-icon">✍️</div>
-                        <h3>編集コーチング</h3>
-                        <p>編集人材の育成から広報誌制作、社史作成まで、企業の情報発信力を強化します。</p>
-                        
-                        <div class="service-features">
-                            <div class="feature">
-                                <h4>👥 編集人材育成</h4>
-                                <p>社内の編集スキルを持つ人材を育成するプログラム</p>
-                            </div>
+
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" alt="企業研修 - 会議室での研修風景">
+                        </div>
+                        <div class="service-content">
+                            <div class="service-icon">🎯</div>
+                            <h3>企業研修</h3>
+                            <p>読書会の企画・運営から研修プログラムまで、企業の人材育成をトータルサポートします。</p>
                             
-                            <div class="feature">
-                                <h4>📰 広報誌制作</h4>
-                                <p>企業の魅力を伝える広報誌の企画・制作をサポート</p>
+                            <div class="service-features">
+                                <div class="feature">
+                                    <h4>📖 読書会企画・運営</h4>
+                                    <p>著者を招いた読書会や社内読書会の企画・運営をサポート</p>
+                                </div>
+                                
+                                <div class="feature">
+                                    <h4>🎓 研修プログラム</h4>
+                                    <p>企業のニーズに合わせたカスタマイズ研修を提供</p>
+                                </div>
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80" alt="編集コーチング - ライティングと編集作業">
+                        </div>
+                        <div class="service-content">
+                            <div class="service-icon">✍️</div>
+                            <h3>編集コーチング</h3>
+                            <p>編集人材の育成から広報誌制作、社史作成まで、企業の情報発信力を強化します。</p>
                             
-                            <div class="feature">
-                                <h4>📚 社史作成</h4>
-                                <p>企業の歴史と価値を後世に残す社史の作成支援</p>
+                            <div class="service-features">
+                                <div class="feature">
+                                    <h4>👥 編集人材育成</h4>
+                                    <p>社内の編集スキルを持つ人材を育成するプログラム</p>
+                                </div>
+                                
+                                <div class="feature">
+                                    <h4>📰 広報誌制作</h4>
+                                    <p>企業の魅力を伝える広報誌の企画・制作をサポート</p>
+                                </div>
+                                
+                                <div class="feature">
+                                    <h4>📚 社史作成</h4>
+                                    <p>企業の歴史と価値を後世に残す社史の作成支援</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- 選ばれる理由 -->
-    <section class="reasons">
-        <div class="container">
-            <h2 class="section-title">どこでも書店が選ばれる理由</h2>
-            <div class="reasons-grid">
-                <div class="reason-item">
-                    <h3>本の理解度を上げるための、著者による読書会開催</h3>
-                    <p>著者本人による読書会を行うことで本人の経験や言葉の背景にある思いなどを直接聞くことができます。これにより、読書だけでは得られなかった学びや、理解をより正確に深めることが可能です。</p>
-                </div>
-                <div class="reason-item">
-                    <h3>1人1人の目標に合わせたオーダーメイド伴走プランもご用意</h3>
-                    <p>弊社担当者が御社の社内状況、課題、問題点等をヒアリングし、社員様の状況に合わせて最適な本をセレクトします。目標設定を行い、行動プランの策定、フィードバックを行うことで、本の学びを最大限活用できるスキルが身につくまで伴走するプランもご用意しています。</p>
-                </div>
-                <div class="reason-item">
-                    <h3>本を買う必要がなく、在庫管理の手間も省ける</h3>
-                    <p>本の選定から購入までの手間や、購入後の管理の手間が一切かからないので、貴重な社員様の時間をより生産的な業務への時間に回すことが可能です。手間がかからない事で在庫管理のための時間やスペースを確保する必要がありません。</p>
-                </div>
-                <div class="reason-item">
-                    <h3>従業員の自発性が向上し、学習意欲が上がり社内が活性化</h3>
-                    <p>自発性、学習意欲のない従業員に「自発性をもて！」と伝えるのは一番言っては行けない言葉です。本によって従業員の好奇心を刺激することで自然と自発性を養うことが可能です。また、同じ本を手にとった従業員同士で共通の話題が生まれるので、円滑なコミュニケーション、社内の活性化を促進することができます。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 導入企業の声 -->
-    <section class="testimonials">
-        <div class="container">
-            <h2 class="section-title">導入企業様の声</h2>
-            <p class="section-subtitle">多くの企業様にご利用いただいています</p>
-            
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="company-logo">
-                        <img src="https://images.unsplash.com/photo-1549923746-c502d488b3ea?auto=format&fit=crop&w=200&q=80" alt="Yahoo!JAPAN ロゴイメージ">
+        <!-- 選ばれる理由 -->
+        <section class="reasons" aria-labelledby="reasons-title">
+            <div class="container">
+                <h2 id="reasons-title" class="section-title">どこでも書店が選ばれる理由</h2>
+                <div class="reasons-grid">
+                    <div class="reason-item">
+                        <h3>本の理解度を上げるための、著者による読書会開催</h3>
+                        <p>著者本人による読書会を行うことで本人の経験や言葉の背景にある思いなどを直接聞くことができます。これにより、読書だけでは得られなかった学びや、理解をより正確に深めることが可能です。</p>
                     </div>
-                    <h3>Yahoo!JAPAN</h3>
-                    <p class="testimonial-text">
-                        「オフィスに新しい本が常にあることで、社員が未知の価値観に触れ、別視点から物事を捉え直すきっかけになっています。」
-                    </p>
-                    <div class="testimonial-effect">
-                        <span class="effect-label">導入効果</span>
-                        <span class="effect-text">社員の視野拡大・創造性向上</span>
+                    <div class="reason-item">
+                        <h3>1人1人の目標に合わせたオーダーメイド伴走プランもご用意</h3>
+                        <p>弊社担当者が御社の社内状況、課題、問題点等をヒアリングし、社員様の状況に合わせて最適な本をセレクトします。目標設定を行い、行動プランの策定、フィードバックを行うことで、本の学びを最大限活用できるスキルが身につくまで伴走するプランもご用意しています。</p>
                     </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="company-logo">
-                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&w=200&q=80" alt="Treasure Data ロゴイメージ">
+                    <div class="reason-item">
+                        <h3>本を買う必要がなく、在庫管理の手間も省ける</h3>
+                        <p>本の選定から購入までの手間や、購入後の管理の手間が一切かからないので、貴重な社員様の時間をより生産的な業務への時間に回すことが可能です。手間がかからない事で在庫管理のための時間やスペースを確保する必要がありません。</p>
                     </div>
-                    <h3>Treasure Data</h3>
-                    <p class="testimonial-text">
-                        「少ないスペースを有効利用でき、買わなかった本が翌月に交換されていくシステムは大変重要です。」
-                    </p>
-                    <div class="testimonial-effect">
-                        <span class="effect-label">導入効果</span>
-                        <span class="effect-text">スペース効率化・コスト削減</span>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="company-logo">
-                        <img src="https://images.unsplash.com/photo-1560472355-536de3962603?auto=format&fit=crop&w=200&q=80" alt="マイクロウェーブ ロゴイメージ">
-                    </div>
-                    <h3>マイクロウェーブ</h3>
-                    <p class="testimonial-text">
-                        「毎月新たな本との出会いが生まれ、社員の成長のきっかけになるツールとして活用しています。」
-                    </p>
-                    <div class="testimonial-effect">
-                        <span class="effect-label">導入効果</span>
-                        <span class="effect-text">社員成長・学習機会創出</span>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="company-logo">
-                        <img src="https://images.unsplash.com/photo-1549923746-c502d488b3ea?auto=format&fit=crop&w=200&q=80" alt="日の丸自動車興業 ロゴイメージ">
-                    </div>
-                    <h3>日の丸自動車興業</h3>
-                    <p class="testimonial-text">
-                        「異なる価値観で選ばれた本が読めることで、社員の価値観がアップデートされています。」
-                    </p>
-                    <div class="testimonial-effect">
-                        <span class="effect-label">導入効果</span>
-                        <span class="effect-text">価値観アップデート・意識改革</span>
+                    <div class="reason-item">
+                        <h3>従業員の自発性が向上し、学習意欲が上がり社内が活性化</h3>
+                        <p>自発性、学習意欲のない従業員に「自発性をもて！」と伝えるのは一番言っては行けない言葉です。本によって従業員の好奇心を刺激することで自然と自発性を養うことが可能です。また、同じ本を手にとった従業員同士で共通の話題が生まれるので、円滑なコミュニケーション、社内の活性化を促進することができます。</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- 利用開始までの流れ -->
-    <section class="flow">
-        <div class="container">
-            <h2 class="section-title">利用開始までの流れ</h2>
-            <div class="flow-steps">
-                <div class="flow-step">
-                    <div class="step-number">1</div>
-                    <h3>資料請求・お問い合わせ</h3>
-                    <p>お問い合わせ後、弊社担当よりご連絡いたします。</p>
-                </div>
-                <div class="flow-step">
-                    <div class="step-number">2</div>
-                    <h3>プランのご提案・お見積もり</h3>
-                    <p>現在の社内状況などをヒアリングし、最適なプランをご提案いたします。</p>
-                </div>
-                <div class="flow-step">
-                    <div class="step-number">3</div>
-                    <h3>プラン決定・ご契約</h3>
-                    <p>プラン決定後、お申し込みいただきご契約となります。</p>
-                </div>
-                <div class="flow-step">
-                    <div class="step-number">4</div>
-                    <h3>ご利用開始</h3>
-                    <p>ご契約後、書籍の選定をして配送させていただきます。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 会社概要 -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">会社概要</h2>
-            <div class="about-content">
-                <div class="company-info-grid">
-                    <div class="info-item">
-                        <dt>会社名</dt>
-                        <dd>どこでも書店株式会社</dd>
-                    </div>
-                    <div class="info-item">
-                        <dt>資本金</dt>
-                        <dd>1,000,000円</dd>
-                    </div>
-                    <div class="info-item">
-                        <dt>代表</dt>
-                        <dd>山﨑 雅人</dd>
-                    </div>
-                    <div class="info-item">
-                        <dt>設立</dt>
-                        <dd>2025年2月14日</dd>
-                    </div>
-                    <div class="info-item">
-                        <dt>所在地</dt>
-                        <dd>東京都目黒区</dd>
-                    </div>
-                </div>
+        <!-- 導入企業の声 -->
+        <section class="testimonials" aria-labelledby="testimonials-title">
+            <div class="container">
+                <h2 id="testimonials-title" class="section-title">導入企業様の声</h2>
+                <p class="section-subtitle">多くの企業様にご利用いただいています</p>
                 
-                <div class="business-overview">
-                    <h3>事業概要</h3>
-                    <ul>
-                        <li>オフィス書店サービス</li>
-                        <li>企業研修（企画・講師派遣）</li>
-                        <li>編集部立ち上げ支援</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="company-logo">
+                            <img src="https://images.unsplash.com/photo-1549923746-c502d488b3ea?auto=format&fit=crop&w=200&q=80" alt="Yahoo!JAPAN ロゴイメージ">
+                        </div>
+                        <h3>Yahoo!JAPAN</h3>
+                        <blockquote class="testimonial-text">
+                            「オフィスに新しい本が常にあることで、社員が未知の価値観に触れ、別視点から物事を捉え直すきっかけになっています。」
+                        </blockquote>
+                        <div class="testimonial-effect">
+                            <span class="effect-label">導入効果</span>
+                            <span class="effect-text">社員の視野拡大・創造性向上</span>
+                        </div>
+                    </div>
 
-    <!-- お知らせ -->
-    <section id="news" class="news">
-        <div class="container">
-            <h2 class="section-title">お知らせ</h2>
-            <div class="news-content">
-                <p>最新情報はこちらでお知らせします</p>
-                <div class="news-item">
-                    <span class="news-date">2025年2月14日</span>
-                    <span class="news-title">どこでも書店株式会社を設立いたしました</span>
-                </div>
-                <div class="news-item">
-                    <span class="news-date">2025年5月予定</span>
-                    <span class="news-title">サービス開始予定</span>
-                </div>
-            </div>
-        </div>
-    </section>
+                    <div class="testimonial-card">
+                        <div class="company-logo">
+                            <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&w=200&q=80" alt="Treasure Data ロゴイメージ">
+                        </div>
+                        <h3>Treasure Data</h3>
+                        <blockquote class="testimonial-text">
+                            「少ないスペースを有効利用でき、買わなかった本が翌月に交換されていくシステムは大変重要です。」
+                        </blockquote>
+                        <div class="testimonial-effect">
+                            <span class="effect-label">導入効果</span>
+                            <span class="effect-text">スペース効率化・コスト削減</span>
+                        </div>
+                    </div>
 
-    <!-- お問い合わせ -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">お問い合わせ</h2>
-            <div class="contact-content">
-                <p class="contact-intro">サービスに関するご質問、資料請求、お見積もりなど、お気軽にお問い合わせください。</p>
-                
-                <form class="contact-form">
-                    <div class="form-group">
-                        <label for="company">会社名 <span class="required">*</span></label>
-                        <input type="text" id="company" name="company" required>
+                    <div class="testimonial-card">
+                        <div class="company-logo">
+                            <img src="https://images.unsplash.com/photo-1560472355-536de3962603?auto=format&fit=crop&w=200&q=80" alt="マイクロウェーブ ロゴイメージ">
+                        </div>
+                        <h3>マイクロウェーブ</h3>
+                        <blockquote class="testimonial-text">
+                            「毎月新たな本との出会いが生まれ、社員の成長のきっかけになるツールとして活用しています。」
+                        </blockquote>
+                        <div class="testimonial-effect">
+                            <span class="effect-label">導入効果</span>
+                            <span class="effect-text">社員成長・学習機会創出</span>
+                        </div>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="name">お名前 <span class="required">*</span></label>
-                        <input type="text" id="name" name="name" required>
+
+                    <div class="testimonial-card">
+                        <div class="company-logo">
+                            <img src="https://images.unsplash.com/photo-1549923746-c502d488b3ea?auto=format&fit=crop&w=200&q=80" alt="日の丸自動車興業 ロゴイメージ">
+                        </div>
+                        <h3>日の丸自動車興業</h3>
+                        <blockquote class="testimonial-text">
+                            「異なる価値観で選ばれた本が読めることで、社員の価値観がアップデートされています。」
+                        </blockquote>
+                        <div class="testimonial-effect">
+                            <span class="effect-label">導入効果</span>
+                            <span class="effect-text">価値観アップデート・意識改革</span>
+                        </div>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="email">メールアドレス <span class="required">*</span></label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">電話番号</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="inquiry-type">お問い合わせ種別 <span class="required">*</span></label>
-                        <select id="inquiry-type" name="inquiry-type" required>
-                            <option value="">選択してください</option>
-                            <option value="資料請求">無料資料請求</option>
-                            <option value="無料体験希望">無料体験希望</option>
-                            <option value="担当者に連絡">担当者に連絡</option>
-                            <option value="見積もり依頼">見積もり依頼</option>
-                            <option value="その他">その他</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">お問い合わせ内容</label>
-                        <textarea id="message" name="message" rows="5"></textarea>
-                    </div>
-                    
-                    <div class="form-group checkbox-group">
-                        <label>
-                            <input type="checkbox" name="privacy" required>
-                            <span class="checkmark"></span>
-                            個人情報の取扱いについて同意する <span class="required">*</span>
-                        </label>
-                    </div>
-                    
-                    <button type="submit" class="btn-primary">送信する</button>
-                </form>
-                
-                <div class="contact-info">
-                    <h3>お問い合わせ先</h3>
-                    <p>Email: support-toi@dokodemo-shoten.com</p>
-                    <p class="note">（返信は平日のみとなります）</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- 利用開始までの流れ -->
+        <section class="flow" aria-labelledby="flow-title">
+            <div class="container">
+                <h2 id="flow-title" class="section-title">利用開始までの流れ</h2>
+                <ol class="flow-steps">
+                    <li class="flow-step">
+                        <div class="step-number" aria-hidden="true">1</div>
+                        <h3>資料請求・お問い合わせ</h3>
+                        <p>お問い合わせ後、弊社担当よりご連絡いたします。</p>
+                    </li>
+                    <li class="flow-step">
+                        <div class="step-number" aria-hidden="true">2</div>
+                        <h3>プランのご提案・お見積もり</h3>
+                        <p>現在の社内状況などをヒアリングし、最適なプランをご提案いたします。</p>
+                    </li>
+                    <li class="flow-step">
+                        <div class="step-number" aria-hidden="true">3</div>
+                        <h3>プラン決定・ご契約</h3>
+                        <p>プラン決定後、お申し込みいただきご契約となります。</p>
+                    </li>
+                    <li class="flow-step">
+                        <div class="step-number" aria-hidden="true">4</div>
+                        <h3>ご利用開始</h3>
+                        <p>ご契約後、書籍の選定をして配送させていただきます。</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- 会社概要 -->
+        <section id="about" class="about" aria-labelledby="about-title">
+            <div class="container">
+                <h2 id="about-title" class="section-title">会社概要</h2>
+                <div class="about-content">
+                    <dl class="company-info-grid">
+                        <div class="info-item">
+                            <dt>会社名</dt>
+                            <dd>どこでも書店株式会社</dd>
+                        </div>
+                        <div class="info-item">
+                            <dt>資本金</dt>
+                            <dd>1,000,000円</dd>
+                        </div>
+                        <div class="info-item">
+                            <dt>代表</dt>
+                            <dd>山﨑 雅人</dd>
+                        </div>
+                        <div class="info-item">
+                            <dt>設立</dt>
+                            <dd>2025年2月14日</dd>
+                        </div>
+                        <div class="info-item">
+                            <dt>所在地</dt>
+                            <dd>東京都目黒区</dd>
+                        </div>
+                    </dl>
+                    
+                    <div class="business-overview">
+                        <h3>事業概要</h3>
+                        <ul>
+                            <li>オフィス書店サービス</li>
+                            <li>企業研修（企画・講師派遣）</li>
+                            <li>編集部立ち上げ支援</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- お知らせ -->
+        <section id="news" class="news" aria-labelledby="news-title">
+            <div class="container">
+                <h2 id="news-title" class="section-title">お知らせ</h2>
+                <div class="news-content">
+                    <p>最新情報はこちらでお知らせします</p>
+                    <div class="news-item">
+                        <time class="news-date" datetime="2025-02-14">2025年2月14日</time>
+                        <span class="news-title">どこでも書店株式会社を設立いたしました</span>
+                    </div>
+                    <div class="news-item">
+                        <time class="news-date" datetime="2025-05">2025年5月予定</time>
+                        <span class="news-title">サービス開始予定</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- お問い合わせ -->
+        <section id="contact" class="contact" aria-labelledby="contact-title">
+            <div class="container">
+                <h2 id="contact-title" class="section-title">お問い合わせ</h2>
+                <div class="contact-content">
+                    <p class="contact-intro">サービスに関するご質問、資料請求、お見積もりなど、お気軽にお問い合わせください。</p>
+                    
+                    <form class="contact-form" novalidate>
+                        <div class="form-group">
+                            <label for="company">会社名 <span class="required" aria-label="必須">*</span></label>
+                            <input type="text" id="company" name="company" required aria-describedby="company-error">
+                            <div id="company-error" class="error-message" aria-live="polite"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="name">お名前 <span class="required" aria-label="必須">*</span></label>
+                            <input type="text" id="name" name="name" required aria-describedby="name-error">
+                            <div id="name-error" class="error-message" aria-live="polite"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">メールアドレス <span class="required" aria-label="必須">*</span></label>
+                            <input type="email" id="email" name="email" required aria-describedby="email-error">
+                            <div id="email-error" class="error-message" aria-live="polite"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">電話番号</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="inquiry-type">お問い合わせ種別 <span class="required" aria-label="必須">*</span></label>
+                            <select id="inquiry-type" name="inquiry-type" required aria-describedby="inquiry-type-error">
+                                <option value="">選択してください</option>
+                                <option value="資料請求">無料資料請求</option>
+                                <option value="無料体験希望">無料体験希望</option>
+                                <option value="担当者に連絡">担当者に連絡</option>
+                                <option value="見積もり依頼">見積もり依頼</option>
+                                <option value="その他">その他</option>
+                            </select>
+                            <div id="inquiry-type-error" class="error-message" aria-live="polite"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">お問い合わせ内容</label>
+                            <textarea id="message" name="message" rows="5"></textarea>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <label>
+                                <input type="checkbox" name="privacy" required aria-describedby="privacy-error">
+                                <span class="checkmark"></span>
+                                <a href="privacy.html">個人情報の取扱いについて</a>同意する <span class="required" aria-label="必須">*</span>
+                            </label>
+                            <div id="privacy-error" class="error-message" aria-live="polite"></div>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary">送信する</button>
+                    </form>
+                    
+                    <div class="contact-info">
+                        <h3>お問い合わせ先</h3>
+                        <p>Email: <a href="mailto:support-toi@dokodemo-shoten.com">support-toi@dokodemo-shoten.com</a></p>
+                        <p class="note">（返信は平日のみとなります）</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- フッター -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-main">
@@ -514,7 +529,7 @@
                         <h3>どこでも書店</h3>
                         <p>開発元：どこでも書店株式会社</p>
                     </div>
-                    <div class="footer-links">
+                    <nav class="footer-links" aria-label="フッターナビゲーション">
                         <ul>
                             <li><a href="#services">サービス</a></li>
                             <li><a href="#about">会社概要</a></li>
@@ -526,7 +541,7 @@
                             <li><a href="terms.html">利用規約</a></li>
                             <li><a href="cookie.html">Cookie設定</a></li>
                         </ul>
-                    </div>
+                    </nav>
                 </div>
                 <div class="footer-bottom">
                     <p>&copy; 2025 どこでも書店株式会社. All rights reserved.</p>
