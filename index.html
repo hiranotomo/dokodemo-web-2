@@ -6,10 +6,15 @@
     <title>どこでも書店 | 本を通して社会や会社の未来を考える機会をつくる</title>
     <meta name="description" content="どこでも書店は、オフィス書店サービス、企業研修、編集コーチングを通じて、本の新しい価値を創出し、企業の成長をサポートします。">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- 有機的グラフィック要素 -->
+    <div class="organic-shape organic-shape-1" aria-hidden="true"></div>
+    <div class="organic-shape organic-shape-2" aria-hidden="true"></div>
+    <div class="organic-shape organic-shape-3" aria-hidden="true"></div>
+    
     <!-- スキップリンク -->
     <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
     
@@ -18,9 +23,13 @@
         <nav class="nav" role="navigation" aria-label="メインナビゲーション">
             <div class="nav-container">
                 <div class="logo">
-                    <i class="fas fa-book-open logo-icon" aria-hidden="true"></i>
-                    <div class="logo-text">どこでも書店</div>
-                    <p class="tagline">本を通して社会や会社の未来を考える機会をつくる</p>
+                    <div class="logo-icon" aria-hidden="true">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div>
+                        <div class="logo-text">どこでも書店</div>
+                        <p class="tagline">本を通して社会や会社の未来を考える機会をつくる</p>
+                    </div>
                 </div>
                 <ul class="nav-menu" id="nav-menu">
                     <li><a href="#services"><i class="fas fa-briefcase"></i> サービス</a></li>
@@ -674,59 +683,18 @@
                 <div class="contact-content">
                     <p class="contact-intro">サービスに関するご質問、資料請求、お見積もりなど、お気軽にお問い合わせください。</p>
                     
-                    <form class="contact-form" novalidate>
-                        <div class="form-group">
-                            <label for="company">会社名 <span class="required" aria-label="必須">*</span></label>
-                            <input type="text" id="company" name="company" required aria-describedby="company-error">
-                            <div id="company-error" class="error-message" aria-live="polite"></div>
+                    <!-- formrun埋め込みフォーム -->
+                    <div class="formrun-embed" data-formrun-form="@your-form-id" data-formrun-redirect="true"></div>
+                    <script src="https://sdk.form.run/js/v2/embed.js"></script>
+                    
+                    <!-- formrunが読み込まれない場合のフォールバック -->
+                    <noscript>
+                        <div class="contact-fallback">
+                            <p>JavaScriptが無効になっているため、フォームが表示されません。</p>
+                            <p>お手数ですが、以下のメールアドレスまで直接お問い合わせください。</p>
+                            <p><strong>Email:</strong> <a href="mailto:support-toi@dokodemo-shoten.com">support-toi@dokodemo-shoten.com</a></p>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="name">お名前 <span class="required" aria-label="必須">*</span></label>
-                            <input type="text" id="name" name="name" required aria-describedby="name-error">
-                            <div id="name-error" class="error-message" aria-live="polite"></div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">メールアドレス <span class="required" aria-label="必須">*</span></label>
-                            <input type="email" id="email" name="email" required aria-describedby="email-error">
-                            <div id="email-error" class="error-message" aria-live="polite"></div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">電話番号</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="inquiry-type">お問い合わせ種別 <span class="required" aria-label="必須">*</span></label>
-                            <select id="inquiry-type" name="inquiry-type" required aria-describedby="inquiry-type-error">
-                                <option value="">選択してください</option>
-                                <option value="資料請求">無料資料請求</option>
-                                <option value="無料体験希望">無料体験希望</option>
-                                <option value="担当者に連絡">担当者に連絡</option>
-                                <option value="見積もり依頼">見積もり依頼</option>
-                                <option value="その他">その他</option>
-                            </select>
-                            <div id="inquiry-type-error" class="error-message" aria-live="polite"></div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">お問い合わせ内容</label>
-                            <textarea id="message" name="message" rows="5"></textarea>
-                        </div>
-                        
-                        <div class="form-group checkbox-group">
-                            <label>
-                                <input type="checkbox" name="privacy" required aria-describedby="privacy-error">
-                                <span class="checkmark"></span>
-                                <a href="privacy.html">個人情報の取扱いについて</a>同意する <span class="required" aria-label="必須">*</span>
-                            </label>
-                            <div id="privacy-error" class="error-message" aria-live="polite"></div>
-                        </div>
-                        
-                        <button type="submit" class="btn-primary">送信する</button>
-                    </form>
+                    </noscript>
                     
                     <div class="contact-info">
                         <h3>お問い合わせ先</h3>
@@ -744,7 +712,9 @@
             <div class="footer-content">
                 <div class="footer-main">
                     <div class="footer-logo">
-                        <i class="fas fa-book-open footer-logo-icon" aria-hidden="true"></i>
+                        <div class="logo-icon" aria-hidden="true">
+                            <i class="fas fa-book-open"></i>
+                        </div>
                         <h3>どこでも書店</h3>
                         <p>開発元：どこでも書店株式会社</p>
                     </div>
